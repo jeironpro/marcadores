@@ -57,14 +57,14 @@ body {
 .contenedor-aplicacion {
     display: flex;
     flex: 1;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .contenido-derecho {
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* Panel Lateral - Sticky y Limpio */
