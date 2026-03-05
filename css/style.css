@@ -382,19 +382,26 @@ body {
   }
 
   .footer {
-    padding: 2rem 1.5rem;
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
+    padding: 1rem 1.5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .footer-texto {
+    font-size: 0.8rem;
   }
 
   .boton-tema-icono {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
   }
 
   .icono-tema {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 }
