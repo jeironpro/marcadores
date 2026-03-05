@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/marcadores.png" type="image/x-icon">
+    <title>Marcadores</title>
+    <!-- Tipografía Google Fonts: Outfit para un look más moderno, geométrico y limpio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="envoltura-global">
+        <!-- Contenedor principal que agrupa lateral y cuerpo -->
+        <div class="contenedor-aplicacion">
+            <!-- Panel lateral izquierdo -->
+            <aside class="panel-lateral" id="panelCategorias">
+                <div class="cabecera-panel">
+                    <h1 class="titulo-panel">MARCADORES</h1>
+                </div>
+                <div class="panel-lateral-fijo">
+                    <!-- Los botones de categoría se generan mediante javascript -->
+                </div>
+            </aside>
+
+            <!-- Overlay para dispositivos móviles -->
+            <div class="overlay-movil" id="overlayMovil"></div>
+
+            <!-- Navegación superior móvil -->
+            <div class="barra-movil">
+                <span class="titulo-movil">MARCADORES</span>
+                <button class="boton-menu-movil" id="botonMenuMovil" aria-label="Abrir menú">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Área principal de tarjetas -->
+            <div class="contenido-derecho">
+                <main class="area-principal" id="areaEnlaces">
+                    <!-- Las tarjetas se generan mediante javascript -->
+                </main>
+
+                <!-- Pie de página con control de tema integrado -->
+                <footer class="footer" id="footerPrincipal">
+                    <p class="footer-texto" id="textoCopyright">Todos los derechos reservados 2026 - Jeironpro</p>
+                    <button class="boton-tema-icono" id="botonCambiarTema" aria-label="Cambiar tema visual">
+                        <!-- Icono SVG puro para cambiar tema -->
+                        <svg class="icono-tema" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de lógica -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
