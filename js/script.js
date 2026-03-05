@@ -109,7 +109,7 @@ function inicializarAplicacion() {
     configurarCambioTema();
     configurarMenuMovil();
     renderizarCategorias();
-    
+
     // Obtener nombres de las categorías evitando funciones anónimas
     const categoriasBase = Object.keys(datosMarcadores);
     if (categoriasBase.length > 0) {
@@ -121,7 +121,7 @@ function inicializarAplicacion() {
 function cambiarTema() {
     const elementoRaiz = document.documentElement;
     const temaActual = elementoRaiz.getAttribute("data-tema");
-    
+
     // Modificar únicamente el atributo para cambiar las variables globales
     if (temaActual === "oscuro") {
         elementoRaiz.removeAttribute("data-tema");
@@ -149,14 +149,14 @@ function limpiarContenedor(contenedor) {
 // Función declarativa vinculada a los botones en el panel
 function manejarClicCategoria(evento) {
     const botonesLateral = document.querySelectorAll(".boton-categoria");
-    
+
     for (const iteradorBoton of botonesLateral) {
         iteradorBoton.classList.remove("activo");
     }
-    
+
     const botonPresionado = evento.currentTarget;
     botonPresionado.classList.add("activo");
-    
+
     const nombreCategoriaDetectada = botonPresionado.getAttribute("data-nombre");
     mostrarEnlacesPorCategoria(nombreCategoriaDetectada);
 
@@ -177,13 +177,13 @@ function configurarMenuMovil() {
 
     if (botonMenu && overlay && panelLateral) {
         // Abrir al presionar la hamburguesa
-        botonMenu.addEventListener("click", function() {
+        botonMenu.addEventListener("click", function () {
             panelLateral.classList.add("abierto");
             overlay.classList.add("activo");
         });
 
         // Cerrar si hace clic por fuera
-        overlay.addEventListener("click", function() {
+        overlay.addEventListener("click", function () {
             panelLateral.classList.remove("abierto");
             overlay.classList.remove("activo");
         });
@@ -195,20 +195,20 @@ function renderizarCategorias() {
     // Apuntamos al contenedor interno debido a la nueva estructura HTML
     const panelGeneral = document.querySelector(".panel-lateral-fijo");
     if (!panelGeneral) return;
-    
+
     const arregloCategorias = Object.keys(datosMarcadores);
-    
+
     for (let indice = 0; indice < arregloCategorias.length; indice++) {
         const nombreSueltoCategoria = arregloCategorias[indice];
-        
+
         const botonElementoUnico = document.createElement("button");
         botonElementoUnico.classList.add("boton-categoria");
         botonElementoUnico.setAttribute("data-nombre", nombreSueltoCategoria);
-        
+
         if (indice === 0) {
             botonElementoUnico.classList.add("activo");
         }
-        
+
         agregarTextoAElemento(botonElementoUnico, nombreSueltoCategoria);
         botonElementoUnico.addEventListener("click", manejarClicCategoria);
         panelGeneral.appendChild(botonElementoUnico);
@@ -219,7 +219,7 @@ function renderizarCategorias() {
 function crearTarjetaEnlace(datosCompletosEnlace) {
     const contenedorTarjetaSuelto = document.createElement("article");
     contenedorTarjetaSuelto.classList.add("tarjeta-enlace");
-    
+
     const contenedorEncabezado = document.createElement("div");
     contenedorEncabezado.classList.add("encabezado-tarjeta");
 
@@ -228,7 +228,7 @@ function crearTarjetaEnlace(datosCompletosEnlace) {
     const nombreLimpio = datosCompletosEnlace.nombre.toLowerCase().replace(/[^a-z0-9]/g, "_");
     iconoEnlace.setAttribute("src", `icon/enlaces/${nombreLimpio}.png`);
     iconoEnlace.setAttribute("alt", `Icono de ${datosCompletosEnlace.nombre}`);
-    iconoEnlace.addEventListener("error", function() {
+    iconoEnlace.addEventListener("error", function () {
         this.style.display = "none";
     });
 
@@ -238,22 +238,22 @@ function crearTarjetaEnlace(datosCompletosEnlace) {
 
     contenedorEncabezado.appendChild(iconoEnlace);
     contenedorEncabezado.appendChild(tituloDeLaTarjeta);
-    
+
     const detalleDeLaTarjeta = document.createElement("p");
     detalleDeLaTarjeta.classList.add("descripcion-enlace");
     agregarTextoAElemento(detalleDeLaTarjeta, datosCompletosEnlace.descripcion);
-    
+
     const vinculoDeLaTarjeta = document.createElement("a");
     vinculoDeLaTarjeta.classList.add("boton-abrir");
     vinculoDeLaTarjeta.setAttribute("href", datosCompletosEnlace.url);
-    vinculoDeLaTarjeta.setAttribute("target", "_blank"); 
-    vinculoDeLaTarjeta.setAttribute("rel", "noopener noreferrer"); 
+    vinculoDeLaTarjeta.setAttribute("target", "_blank");
+    vinculoDeLaTarjeta.setAttribute("rel", "noopener noreferrer");
     agregarTextoAElemento(vinculoDeLaTarjeta, "Abrir Enlace");
-    
+
     contenedorTarjetaSuelto.appendChild(contenedorEncabezado);
     contenedorTarjetaSuelto.appendChild(detalleDeLaTarjeta);
     contenedorTarjetaSuelto.appendChild(vinculoDeLaTarjeta);
-    
+
     return contenedorTarjetaSuelto;
 }
 
@@ -261,11 +261,11 @@ function crearTarjetaEnlace(datosCompletosEnlace) {
 function mostrarEnlacesPorCategoria(categoriaPedida) {
     const cuadroParaLosEnlaces = document.getElementById("areaEnlaces");
     if (!cuadroParaLosEnlaces) return;
-    
+
     limpiarContenedor(cuadroParaLosEnlaces);
-    
+
     const todosLosEnlacesPertenecientes = datosMarcadores[categoriaPedida] || [];
-    
+
     for (const enlaceSingular of todosLosEnlacesPertenecientes) {
         const tarjetaEnsamblePreparada = crearTarjetaEnlace(enlaceSingular);
         cuadroParaLosEnlaces.appendChild(tarjetaEnsamblePreparada);
