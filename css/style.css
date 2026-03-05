@@ -409,17 +409,17 @@ body {
     }
 
     .footer-texto {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .boton-tema-icono {
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
         flex-shrink: 0;
     }
 
     .icono-tema {
-        width: 20px;
-        height: 20px;
+        width: 16px;
+        height: 16px;
     }
 }
