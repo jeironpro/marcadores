@@ -234,7 +234,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: border-color var(--transicion-lenta);
+    background-color: var(--color-superficie);
+    transition:
+        border-color var(--transicion-lenta),
+        background-color var(--transicion-lenta);
 }
 
 .boton-tema-icono {
@@ -402,6 +405,7 @@ body {
         align-items: center;
         gap: 1rem;
         text-align: left;
+        background-color: var(--color-superficie);
     }
 
     .footer-texto {
