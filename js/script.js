@@ -1,5 +1,11 @@
 // Base de datos de los enlaces seccionados por categoría
 const datosMarcadores = {
+    "Redes Sociales": [
+        { nombre: "LinkedIn", descripcion: "Red profesional para conectar con otros profesionales y empresas.", url: "https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" },
+        { nombre: "Threads", descripcion: "Plataforma de Meta para compartir actualizaciones de texto y unirse a conversaciones públicas.", url: "https://www.threads.com/" },
+        { nombre: "Instagram", descripcion: "Red social para compartir fotos y videos.", url: "https://www.instagram.com/" },
+        { nombre: "Facebook", descripcion: "Red social para conectar con amistades, familiares y comunidades de personas que comparten tus intereses.", url: "https://www.facebook.com/" },
+    ],
     "Gestión": [
         { nombre: "GitHub", descripcion: "Plataforma principal para alojamiento de código e iteración de desarrollo.", url: "https://github.com/jeironpro?tab=repositories" },
         { nombre: "Jira", descripcion: "Software de seguimiento de incidentes y tablero ágil de proyectos.", url: "https://jeironpro.atlassian.net/jira/for-you" },
@@ -82,6 +88,14 @@ const datosMarcadores = {
         { nombre: "Coding Stella", descripcion: "Directrices estilísticas en vivo aportando resoluciones innovadoras al mundo frontend.", url: "https://github.com/codingstella/" },
         { nombre: "Frontend Joe", descripcion: "Maestro en disecciones minuciosas para solucionar enrevesadas interacciones neomórficas.", url: "https://github.com/frontend-joe/" },
     ],
+    "Aprendizaje": [
+        { nombre: "AWS Skill Builder", descripcion: "Plataforma oficial de Amazon Web Services para el desarrollo de habilidades técnicas y certificaciones en la nube.", url: "https://skillbuilder.aws/learn" },
+        { nombre: "MPC for beginners", descripcion: "Recurso para aprender a usar el MPC de Akai.", url: "https://github.com/microsoft/mcp-for-beginners/tree/main" },
+        { nombre: "Cisco Networking Academy", descripcion: "Plataforma oficial de Cisco para el desarrollo de habilidades técnicas y certificaciones en redes.", url: "https://www.netacad.com/" },
+        { nombre: "Comprehensive Rust", descripcion: "Recurso para aprender a usar Rust.", url: "https://google.github.io/comprehensive-rust/es/" },
+        { nombre: "30 Days Of JavaScript", descripcion: "Recurso para aprender a usar JavaScript.", url: "https://github.com/Asabeneh/30-Days-Of-JavaScript" },
+        { nombre: "Halloween Dev", descripcion: "Recurso para aprender a hacer ejercicios de programación JavaScript.", url: "https://www.halloween.dev/es" },
+    ]
 };
 
 // Rutina corta expresada usando Arrow Function para crear nodos de texto
