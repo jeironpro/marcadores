@@ -290,6 +290,7 @@ body {
         position: sticky;
         top: 0;
         z-index: 90;
+        flex-shrink: 0; /* Vital para que no colapse */
     }
 
     .titulo-movil {
@@ -367,17 +368,16 @@ body {
 
     .area-principal {
         padding: 2.5rem;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
-
-
 }
 
 @media (max-width: 600px) {
     .area-principal {
         padding: 1.5rem;
         grid-template-columns: 1fr;
-        /* Tarjetas al 100% de ancho */
         gap: 2rem;
+        flex: 1; /* Asegura que ocupe el resto del espacio */
     }
 
     .tarjeta-enlace {
@@ -386,6 +386,7 @@ body {
 
     .barra-movil {
         padding: 1rem 1.5rem;
+        flex-shrink: 0;
     }
 
     .pie-panel {
