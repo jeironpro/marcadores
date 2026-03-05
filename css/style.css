@@ -63,7 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 /* Panel Lateral - Sticky y Limpio */
@@ -148,6 +148,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 3rem;
   align-content: start;
+  overflow-y: auto;
 }
 
 .tarjeta-enlace {
