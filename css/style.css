@@ -55,15 +55,16 @@ body {
 }
 
 .contenedor-aplicacion {
-    display: flex;
+    display: grid;
+    grid-template-columns: 320px 1fr;
     flex: 1;
-    overflow: auto;
+    overflow: hidden;
+    height: 100%;
 }
 
 .contenido-derecho {
     display: flex;
     flex-direction: column;
-    flex: 1;
     overflow: auto;
 }
 
@@ -270,6 +271,7 @@ body {
 
 @media (max-width: 1024px) {
     .contenedor-aplicacion {
+        display: flex;
         flex-direction: column;
         width: 100%;
     }
