@@ -45,6 +45,11 @@ const datosMarcadores = {
         { nombre: "RunSQL", descripcion: "Playground directo desde navegador para jugar y analizar consultas SQL reales.", url: "https://runsql.com/" },
         { nombre: "CrewAI", descripcion: "Orquestación grupal en la plataforma de desarrollo multi-agente guiado por IAs.", url: "https://app.crewai.com/studio/v2" },
         { nombre: "NotebookLM", descripcion: "Modelo experimental impulsado sobre IA de Google guiando como un cuaderno investigativo inteligente.", url: "https://notebooklm.google.com/" },
+        { nombre: "DrawDB", descripcion: "Editor de diseño de bases de datos, modelador de datos y generador SQL gratuito y de código abierto, sencillo e intuitivo.", url: "https://www.drawdb.app/" },
+        { nombre: "Dokploy", descripcion: "Dokploy es una plataforma como servicio (PaaS) gratuita y autoalojada que simplifica el despliegue y la gestión de aplicaciones y bases de datos.", url: "https://github.com/Dokploy/dokploy" },
+        { nombre: "Ip Query", descripcion: "Infraestructura de inteligencia IP. Datos de direcciones IP sencillos y directos. Abierto a todo el mundo. Admite consultas masivas, XML, YAML y JSON.", url: "https://ipquery.io/" },
+        { nombre: "Web Check", descripcion: "Herramienta online de análisis web bastante potente, especialmente usada en ciberseguridad y desarrollo.", url: "https://web-check.xyz/" },
+        { nombre: "InsForge", descripcion: "El backend diseñado para el desarrollo de agentes. Proporcione a los agentes todo lo que necesitan para lanzar aplicaciones full-stack.", url: "https://insforge.dev/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
@@ -53,6 +58,9 @@ const datosMarcadores = {
         { nombre: "ChatGPT", descripcion: "Plataforma modelo y de asistencia de conversación e ingeniería de sistema más famosa.", url: "https://chatgpt.com/" },
         { nombre: "Gemini", descripcion: "Motor masivo guiado por Google que integra multimodalidad desde su base interna.", url: "https://gemini.google.com/app?hl=es-ES" },
         { nombre: "Claude", descripcion: "El LLM superior creado por Anthropic, amigable, altamente humano y excelente programador.", url: "https://claude.ai/new" },
+    ],
+    "Models IA": [
+        { nombre: "llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms", url: "https://www.llama.com/" },
     ],
     "For Developers": [
         { nombre: "Meta for Developers", descripcion: "Plataformas sobre infraestructura, apps VR, WhatsApp y software open source de Meta.", url: "https://developers.meta.com/" },
@@ -77,6 +85,8 @@ const datosMarcadores = {
         { nombre: "Public APIs", descripcion: "Base enorme de APIs categorizadas a lo bestia para realizar llamadas rápidas.", url: "https://publicapis.io/" },
         { nombre: "Theme toggle effect", descripcion: "Inmerso compilado de SVG micro-animados al instante de habilitar claro-oscuro tu web.", url: "https://theme-toggle.rdsx.dev/" },
         { nombre: "Expo Icons", descripcion: "Vasto diccionario de material y vectores precargados a incrustar en tus apps Expo nativas.", url: "https://icons.expo.fyi/Index" },
+        { nombre: "Font Source", descripcion: "Plataforma para desarrolladores web que ofrece fuentes tipográficas open source listas para usar en proyectos.", url: "https://fontsource.org/" },
+        { nombre: "Icones", descripcion: "Herramienta para desarrolladores y diseñadores que funciona como un buscador y agregador gigante de iconos open source.", url: "https://icones.js.org/" },
     ],
     "Google": [
         { nombre: "Gmail", descripcion: "Tu punto de bandeja indispensable y la llave en un ecosistema robusto universal de trabajo.", url: "https://mail.google.com/mail/u/0/?ogbl#inbox" },
@@ -95,6 +105,7 @@ const datosMarcadores = {
         { nombre: "Comprehensive Rust", descripcion: "Recurso para aprender a usar Rust.", url: "https://google.github.io/comprehensive-rust/es/" },
         { nombre: "30 Days Of JavaScript", descripcion: "Recurso para aprender a usar JavaScript.", url: "https://github.com/Asabeneh/30-Days-Of-JavaScript" },
         { nombre: "Halloween Dev", descripcion: "Recurso para aprender a hacer ejercicios de programación JavaScript.", url: "https://www.halloween.dev/es" },
+        { nombre: "PaloAlto Networks", descripcion: "Cursos GRATUITOS de formación en ciberseguridad.", url: "https://www.paloaltonetworks.es/cyberpedia/free-cybersecurity-education-courses" },
     ]
 };
 
