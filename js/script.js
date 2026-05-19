@@ -25,6 +25,7 @@ const datosMarcadores = {
         { nombre: "Expo", descripcion: "Librería y entorno que potencia y facilita la creación de apps con React Native.", url: "https://docs.expo.dev/" },
         { nombre: "React", descripcion: "Documentación fundamental de la biblioteca declarativa en JS de interfaces UI.", url: "https://es.react.dev/learn" },
         { nombre: "React Native", descripcion: "Guías nativas sobre creación de aplicaciones de móviles apoyándote en paradigmas de React.", url: "https://reactnative.dev/docs/getting-started" },
+        { nombre: "Vite", descripcion: "Vite es una herramienta de desarrollo frontend ultrarrápida que impulsa la próxima generación de aplicaciones web.", url: "https://vite.dev/guide/" },
         { nombre: "Pencil", descripcion: "Información central para herramientas de bocetaje y diseño gráfico de interfaces.", url: "https://docs.pencil.dev/" },
     ],
     "Herramientas": [
@@ -50,6 +51,7 @@ const datosMarcadores = {
         { nombre: "Ip Query", descripcion: "Infraestructura de inteligencia IP. Datos de direcciones IP sencillos y directos. Abierto a todo el mundo. Admite consultas masivas, XML, YAML y JSON.", url: "https://ipquery.io/" },
         { nombre: "Web Check", descripcion: "Herramienta online de análisis web bastante potente, especialmente usada en ciberseguridad y desarrollo.", url: "https://web-check.xyz/" },
         { nombre: "InsForge", descripcion: "El backend diseñado para el desarrollo de agentes. Proporcione a los agentes todo lo que necesitan para lanzar aplicaciones full-stack.", url: "https://insforge.dev/" },
+        { nombre: "Canva", descripcion: "Canva es una herramienta de diseño y publicación online que tiene como misión poner el poder del diseño al alcance de todo el mundo, para que cualquier persona pueda diseñar lo que quiera y publicar donde quiera.", url: "https://www.canva.com/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
@@ -58,9 +60,15 @@ const datosMarcadores = {
         { nombre: "ChatGPT", descripcion: "Plataforma modelo y de asistencia de conversación e ingeniería de sistema más famosa.", url: "https://chatgpt.com/" },
         { nombre: "Gemini", descripcion: "Motor masivo guiado por Google que integra multimodalidad desde su base interna.", url: "https://gemini.google.com/app?hl=es-ES" },
         { nombre: "Claude", descripcion: "El LLM superior creado por Anthropic, amigable, altamente humano y excelente programador.", url: "https://claude.ai/new" },
+        { nombre: "Gamma", descripcion: "Gamma es tu socio de diseño de IA para presentaciones, sitios web, publicaciones en redes sociales y más, para que puedas concentrarte en lo que mejor haces.", url: "https://gamma.app/" },
+        { nombre: "Mistral AI", descripcion: "La plataforma de IA más potente para empresas. Personaliza, ajusta e implementa asistentes de IA, agentes autónomos e IA multimodal con modelos abiertos.", url: "https://docs.mistral.ai/" },
     ],
     "Models IA": [
-        { nombre: "llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms", url: "https://www.llama.com/" },
+        { nombre: "Llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms.", url: "https://www.llama.com/" },
+        { nombre: "Qwen", descripcion: "Qwen (o Tongyi Qianwen) es una familia de modelos de lenguaje de inteligencia artificial (LLM) de alto rendimiento desarrollada por Alibaba Cloud.", url: "https://qwen.ai/qwenchat" },
+        { nombre: "Deepseek", descripcion: "Modelos de lenguaje grande (LLMs) de alto rendimiento y código abierto.", url: "https://www.deepseek.com/en/" },
+        { nombre: "Gemma", descripcion: "Gemma es una familia de modelos abiertos, ligeros y de última generación, creados a partir de la misma investigación y tecnología que se utilizó para desarrollar los modelos Gemini.", url: "https://deepmind.google/models/gemma/" },
+        { nombre: "Phi", descripcion: "Los modelos Phi ofrecen soluciones de IA rentables y de alto rendimiento en el entorno periférico, ampliando los límites de la IA generativa.", url: "https://azure.microsoft.com/en-us/products/phi" },
     ],
     "For Developers": [
         { nombre: "Meta for Developers", descripcion: "Plataformas sobre infraestructura, apps VR, WhatsApp y software open source de Meta.", url: "https://developers.meta.com/" },
