@@ -11,6 +11,42 @@ const datosMarcadores = {
         { nombre: "Jira", descripcion: "Software de seguimiento de incidentes y tablero ágil de proyectos.", url: "https://jeironpro.atlassian.net/jira/for-you" },
         { nombre: "phpMyAdmin", descripcion: "Administración visual y rápida para bases de datos MySQL y MariaDB.", url: "http://localhost/phpMyAdmin/index.php?route=/" },
     ],
+    "Mis páginas web": [
+        { nombre: "Juego 7 Letras", descripcion: "Juego 7 Letras", url: "https://jeironpro.github.io/juego-7-letras" },
+        { nombre: "Juego Memoriza Carta", descripcion: "Memoriza Carta", url: "https://jeironpro.github.io/juego-memoriza-carta" },
+        { nombre: "Juego Palabra Oculta", descripcion: "Juego Palabra Oculta", url: "https://jeironpro.github.io/juego-palabra-oculta" },
+        { nombre: "Juego Preguntas Respuestas", descripcion: "Juego Preguntas Respuestas", url: "https://jeironpro.github.io/juego-preguntas-respuestas" },
+        { nombre: "Juego Serpiente", descripcion: "Serpiente", url: "https://jeironpro.github.io/juego-serpiente" },
+        { nombre: "Juego Sopa Letras", descripcion: "Juego Sopa Letras", url: "https://jeironpro.github.io/juego-sopa-letras" },
+        { nombre: "Juego Sudoku", descripcion: "Juego Sudoku", url: "https://jeironpro.github.io/juego-sudoku" },
+        { nombre: "Juego Tic Tac Toe", descripcion: "Tic Tac Toe", url: "https://jeironpro.github.io/juego-tic-tac-toe" },
+        { nombre: "Marcadores", descripcion: "Marcadores", url: "https://jeironpro.github.io/marcadores" },
+        { nombre: "Portafolio Jeironpro", descripcion: "Portafolio Jeironpro", url: "https://portafolio-jeironpro.pages.dev/" },
+        { nombre: "Web Algoritmos", descripcion: "Web Algoritmos", url: "https://jeironpro.github.io/web-algoritmos" },
+        { nombre: "Web Calculadora", descripcion: "Calculadora", url: "https://jeironpro.github.io/web-calculadora" },
+        { nombre: "Web Calculadora Edad", descripcion: "Calculadora Edad", url: "https://jeironpro.github.io/web-calculadora-edad" },
+        { nombre: "Web Calendario", descripcion: "Calendario", url: "https://jeironpro.github.io/web-calendario" },
+        { nombre: "Web Codi Wiki", descripcion: "Codi Wiki", url: "https://jeironpro.github.io/web-codi-wiki" },
+        { nombre: "Web Codigos Http", descripcion: "Web Codigos Http", url: "https://jeironpro.github.io/web-codigos-http" },
+        { nombre: "Web Conversor Universal", descripcion: "Web Conversor Universal", url: "https://jeironpro.github.io/web-conversor-universal" },
+        { nombre: "Web Convertidor Moneda", descripcion: "Convertidor Moneda", url: "https://jeironpro.github.io/web-convertidor-moneda" },
+        { nombre: "Web Curso Git", descripcion: "Curso Git", url: "https://jeironpro.github.io/web-curso-git" },
+        { nombre: "Web Curso Sql", descripcion: "Curso Sql", url: "https://jeironpro.github.io/web-curso-sql" },
+        { nombre: "Web Ejercicios Pyja", descripcion: "Web Ejercicios Pyja", url: "https://jeironpro.github.io/web-ejercicios-pyja" },
+        { nombre: "Web Generador Clave Secreta", descripcion: "Web Generador Clave Secreta", url: "https://jeironpro.github.io/web-generador-clave-secreta" },
+        { nombre: "Web Generador Codigo Qr", descripcion: "Generador Codigo Qr", url: "https://jeironpro.github.io/web-generador-codigo-qr" },
+        { nombre: "Web Generador Contrasena", descripcion: "Generador Contrasena", url: "https://jeironpro.github.io/web-generador-contrasena" },
+        { nombre: "Web Generador Crucigramas", descripcion: "Generador Crucigramas", url: "https://jeironpro.github.io/web-generador-crucigramas" },
+        { nombre: "Web Gestiona Presupuesto", descripcion: "Gestiona Presupuesto", url: "https://jeironpro.github.io/web-gestiona-presupuesto" },
+        { nombre: "Web Lector Arxiu", descripcion: "Lector Arxiu", url: "https://jeironpro.github.io/web-lector-arxiu" },
+        { nombre: "Web Lexaro", descripcion: "Lexaro", url: "https://jeironpro.github.io/web-lexaro" },
+        { nombre: "Web Narcopedia", descripcion: "Narcopedia", url: "https://jeironpro.github.io/web-narcopedia" },
+        { nombre: "Web Paises Visitados", descripcion: "Paises Visitados", url: "https://jeironpro.github.io/web-paises-visitados" },
+        { nombre: "Web Porcentaje Anual", descripcion: "Porcentaje Anual", url: "https://jeironpro.github.io/web-porcentaje-anual" },
+        { nombre: "Web Redimensiona Imagen", descripcion: "Redimensiona Imagen", url: "https://jeironpro.github.io/web-redimensiona-imagen" },
+        { nombre: "Web Reproductor Musica", descripcion: "Reproductor Musica", url: "https://jeironpro.github.io/web-reproductor-musica" },
+        { nombre: "Web Tests Daw", descripcion: "Web Tests Daw", url: "https://jeironpro.github.io/web-tests-daw" }
+    ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
         { nombre: "Django Rest Framework", descripcion: "Kit de herramientas poderoso y flexible para construir APIs Web en Django.", url: "https://www.django-rest-framework.org/" },
@@ -52,6 +88,7 @@ const datosMarcadores = {
         { nombre: "Web Check", descripcion: "Herramienta online de análisis web bastante potente, especialmente usada en ciberseguridad y desarrollo.", url: "https://web-check.xyz/" },
         { nombre: "InsForge", descripcion: "El backend diseñado para el desarrollo de agentes. Proporcione a los agentes todo lo que necesitan para lanzar aplicaciones full-stack.", url: "https://insforge.dev/" },
         { nombre: "Canva", descripcion: "Canva es una herramienta de diseño y publicación online que tiene como misión poner el poder del diseño al alcance de todo el mundo, para que cualquier persona pueda diseñar lo que quiera y publicar donde quiera.", url: "https://www.canva.com/" },
+        { nombre: "Cloudflare Pages", descripcion: "Cloudflare Pages es un servicio de hosting y despliegue para sitios web estáticos y aplicaciones frontend modernas.", url: "https://dash.cloudflare.com/" }
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
@@ -245,11 +282,20 @@ function crearTarjetaEnlace(datosCompletosEnlace) {
     const iconoEnlace = document.createElement("img");
     iconoEnlace.classList.add("icono-tarjeta");
     const nombreLimpio = datosCompletosEnlace.nombre.toLowerCase().replace(/[^a-z0-9]/g, "_");
-    iconoEnlace.setAttribute("src", `icon/enlaces/${nombreLimpio}.png`);
+    const EXTENSIONES_ICONO = ["svg", "jpg", "jpeg", "ico", "gif", "png", "webp"];
+    let indiceExtension = 0;
+    const baseRuta = `icon/enlaces/${nombreLimpio}`;
+    function cargarIcono() {
+        if (indiceExtension >= EXTENSIONES_ICONO.length) {
+            iconoEnlace.style.display = "none";
+            return;
+        }
+        iconoEnlace.setAttribute("src", `${baseRuta}.${EXTENSIONES_ICONO[indiceExtension]}`);
+        indiceExtension++;
+    }
     iconoEnlace.setAttribute("alt", `Icono de ${datosCompletosEnlace.nombre}`);
-    iconoEnlace.addEventListener("error", function () {
-        this.style.display = "none";
-    });
+    iconoEnlace.addEventListener("error", cargarIcono);
+    cargarIcono();
 
     const tituloDeLaTarjeta = document.createElement("h2");
     tituloDeLaTarjeta.classList.add("titulo-enlace");
