@@ -68,7 +68,6 @@ const datosMarcadores = {
     "Herramientas": [
         { nombre: "Supabase", descripcion: "Alternativa Backend-as-a-Service escalable basada de en PostgreSQL.", url: "https://supabase.com/dashboard" },
         { nombre: "Firebase", descripcion: "Alojamiento real-time, bases no-relacionales y utilidades generales que ofrece Google.", url: "https://console.firebase.google.com/" },
-        { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" },
         { nombre: "Docker", descripcion: "Panel analítico de administración a tus imágenes publicadas en el Hub.", url: "https://app.docker.com/accounts/jeironpro" },
         { nombre: "PlanetScale", descripcion: "Bases de datos relacionales sin servidor creadas para la máxima escalabilidad y bifurcación.", url: "https://planetscale.com/" },
         { nombre: "Turso", descripcion: "Servicios de bases orientadas a SQLite perimetral o en los bordes para baja latencia.", url: "https://turso.tech/" },
@@ -90,7 +89,8 @@ const datosMarcadores = {
         { nombre: "Web Check", descripcion: "Herramienta online de análisis web bastante potente, especialmente usada en ciberseguridad y desarrollo.", url: "https://web-check.xyz/" },
         { nombre: "InsForge", descripcion: "El backend diseñado para el desarrollo de agentes. Proporcione a los agentes todo lo que necesitan para lanzar aplicaciones full-stack.", url: "https://insforge.dev/" },
         { nombre: "Canva", descripcion: "Canva es una herramienta de diseño y publicación online que tiene como misión poner el poder del diseño al alcance de todo el mundo, para que cualquier persona pueda diseñar lo que quiera y publicar donde quiera.", url: "https://www.canva.com/" },
-        { nombre: "Cloudflare Pages", descripcion: "Cloudflare Pages es un servicio de hosting y despliegue para sitios web estáticos y aplicaciones frontend modernas.", url: "https://dash.cloudflare.com/" }
+        { nombre: "Cloudflare Pages", descripcion: "Cloudflare Pages es un servicio de hosting y despliegue para sitios web estáticos y aplicaciones frontend modernas.", url: "https://dash.cloudflare.com/" },
+        { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
