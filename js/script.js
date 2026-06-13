@@ -68,6 +68,7 @@ const datosMarcadores = {
     "Herramientas": [
         { nombre: "Supabase", descripcion: "Alternativa Backend-as-a-Service escalable basada de en PostgreSQL.", url: "https://supabase.com/dashboard" },
         { nombre: "Firebase", descripcion: "Alojamiento real-time, bases no-relacionales y utilidades generales que ofrece Google.", url: "https://console.firebase.google.com/" },
+        { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" }
         { nombre: "Docker", descripcion: "Panel analítico de administración a tus imágenes publicadas en el Hub.", url: "https://app.docker.com/accounts/jeironpro" },
         { nombre: "PlanetScale", descripcion: "Bases de datos relacionales sin servidor creadas para la máxima escalabilidad y bifurcación.", url: "https://planetscale.com/" },
         { nombre: "Turso", descripcion: "Servicios de bases orientadas a SQLite perimetral o en los bordes para baja latencia.", url: "https://turso.tech/" },
