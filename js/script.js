@@ -95,6 +95,7 @@ const datosMarcadores = {
         { nombre: "Canva", descripcion: "Canva es una herramienta de diseño y publicación online que tiene como misión poner el poder del diseño al alcance de todo el mundo, para que cualquier persona pueda diseñar lo que quiera y publicar donde quiera.", url: "https://www.canva.com/" },
         { nombre: "Cloudflare Pages", descripcion: "Cloudflare Pages es un servicio de hosting y despliegue para sitios web estáticos y aplicaciones frontend modernas.", url: "https://dash.cloudflare.com/" },
         { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" },
+        { nombre: "Railway", descripcion: "Railway es una plataforma en la nube integral para el despliegue de aplicaciones web, servidores, bases de datos y mucho más, con escalado, monitorización y seguridad automáticos.", url: "https://railway.com/dashboard" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
