@@ -51,6 +51,7 @@ const datosMarcadores = {
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
     	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
+    	{ nombre: "Web Naruto", descripcion: "Personajes del anime naruto.", url: "https://web-naruto.pages.dev/" }
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
@@ -96,6 +97,7 @@ const datosMarcadores = {
         { nombre: "Cloudflare Pages", descripcion: "Cloudflare Pages es un servicio de hosting y despliegue para sitios web estáticos y aplicaciones frontend modernas.", url: "https://dash.cloudflare.com/" },
         { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" },
         { nombre: "Railway", descripcion: "Railway es una plataforma en la nube integral para el despliegue de aplicaciones web, servidores, bases de datos y mucho más, con escalado, monitorización y seguridad automáticos.", url: "https://railway.com/dashboard" },
+        { nombre: "Appwrite", descripcion: "Appwrite es una plataforma de código abierto para crear y escalar aplicaciones más rápidamente, que ofrece autenticación, bases de datos, almacenamiento, funciones, mensajería, tiempo real y alojamiento web, todo en un mismo lugar.", url: "https://cloud.appwrite.io/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
