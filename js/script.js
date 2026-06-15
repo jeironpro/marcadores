@@ -49,8 +49,8 @@ const datosMarcadores = {
         { nombre: "Web Curso DCS", descripcion: "Curso DCS.", url: "https://jeironpro.github.io/web-curso-dcs" },
     ],
     "Proyectos FullStack": [
-    	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo." url: "https://planical.pages.dev/login" },
-    	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones." url: "https://web-pokemon.pages.dev/" },
+    	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
+    	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
