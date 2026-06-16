@@ -12,6 +12,7 @@ const datosMarcadores = {
         { nombre: "phpMyAdmin", descripcion: "Administración visual y rápida para bases de datos MySQL y MariaDB.", url: "http://localhost/phpMyAdmin/index.php?route=/" },
     ],
     "Mis páginas web": [
+        { nombre: "Portafolio", descripcion: "Mi portafolio personal de desarrollador.", url: "https://portafolio-jeironpro.pages.dev/" },
         { nombre: "Juego 7 Letras", descripcion: "Juego 7 Letras.", url: "https://jeironpro.github.io/juego-7-letras" },
         { nombre: "Juego Memoriza Carta", descripcion: "Memoriza Carta.", url: "https://jeironpro.github.io/juego-memoriza-carta" },
         { nombre: "Juego Palabra Oculta", descripcion: "Juego Palabra Oculta.", url: "https://jeironpro.github.io/juego-palabra-oculta" },
@@ -51,7 +52,7 @@ const datosMarcadores = {
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
     	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
-    	{ nombre: "Web Naruto", descripcion: "Personajes del anime naruto.", url: "https://web-naruto.pages.dev/" }
+    	{ nombre: "Web Naruto", descripcion: "Personajes del anime naruto.", url: "https://web-naruto.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
@@ -98,6 +99,7 @@ const datosMarcadores = {
         { nombre: "Render", descripcion: "Infraestructura intuitiva para escalar cualquier aplicación o agente desde su primer usuario hasta el mil millones.", url: "https://render.com/" },
         { nombre: "Railway", descripcion: "Railway es una plataforma en la nube integral para el despliegue de aplicaciones web, servidores, bases de datos y mucho más, con escalado, monitorización y seguridad automáticos.", url: "https://railway.com/dashboard" },
         { nombre: "Appwrite", descripcion: "Appwrite es una plataforma de código abierto para crear y escalar aplicaciones más rápidamente, que ofrece autenticación, bases de datos, almacenamiento, funciones, mensajería, tiempo real y alojamiento web, todo en un mismo lugar.", url: "https://cloud.appwrite.io/" },
+        { nombre: "Spline", descripcion: "Spline es una plataforma de diseño para crear y colaborar en experiencias interactivas listas para la producción en tiempo real.", url: "https://spline.design/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
@@ -108,6 +110,7 @@ const datosMarcadores = {
         { nombre: "Claude", descripcion: "El LLM superior creado por Anthropic, amigable, altamente humano y excelente programador.", url: "https://claude.ai/new" },
         { nombre: "Gamma", descripcion: "Gamma es tu socio de diseño de IA para presentaciones, sitios web, publicaciones en redes sociales y más, para que puedas concentrarte en lo que mejor haces.", url: "https://gamma.app/" },
         { nombre: "Mistral AI", descripcion: "La plataforma de IA más potente para empresas. Personaliza, ajusta e implementa asistentes de IA, agentes autónomos e IA multimodal con modelos abiertos.", url: "https://docs.mistral.ai/" },
+        { nombre: "Odysseus", descripcion: "Odysseus es una interfaz autoalojada para interactuar con modelos de lenguaje: chat, agentes autónomos, herramientas, servicios de modelos, correo electrónico, investigación y mucho más. Prioriza la comunicación local, la privacidad y no utiliza telemetría. Solo tú y tus modelos.", url: "https://pewdiepie-archdaemon.github.io/odysseus/" }
     ],
     "Models IA": [
         { nombre: "Llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms.", url: "https://www.llama.com/" },
@@ -141,6 +144,12 @@ const datosMarcadores = {
         { nombre: "Expo Icons", descripcion: "Vasto diccionario de material y vectores precargados a incrustar en tus apps Expo nativas.", url: "https://icons.expo.fyi/Index" },
         { nombre: "Font Source", descripcion: "Plataforma para desarrolladores web que ofrece fuentes tipográficas open source listas para usar en proyectos.", url: "https://fontsource.org/" },
         { nombre: "Icones", descripcion: "Herramienta para desarrolladores y diseñadores que funciona como un buscador y agregador gigante de iconos open source.", url: "https://icones.js.org/" },
+        { nombre: "Lukacho UI", descripcion: "Componentes de interfaz de usuario especiales para tu sitio web, creados con React.js, TailwindCSS y FramerMotion.", url: "https://ui.lukacho.com/" },
+        { nombre: "Skiper UI", descripcion: "Componentes totalmente nuevos y poco comunes para tu proyecto Next.js.", url: "https://skiper-ui.com/" },
+        { nombre: "Godly", descripcion: "Una cuidada selección de más de 1000 de los mejores sitios web de IA, Web3, portafolios y otros sitios web destacados en Internet.", url: "https://godly.website/" },
+        { nombre: "The System Design Primer", descripcion: "Aprender a diseñar sistemas escalables te ayudará a convertirte en un mejor ingeniero.", url: "https://github.com/donnemartin/system-design-primer" },
+        { nombre: "Open Notebook", descripcion: "Una alternativa de código abierto y centrada en la privacidad a Google Notebook LM.", url: "https://github.com/lfnovo/open-notebook" },
+        { nombre: "Interviewing", descripcion: "Entrevistas simuladas anónimas con ingenieros de Meta, Google, OpenAI, Amazon y otras empresas líderes.", url: "https://interviewing.io/" },
     ],
     "Google": [
         { nombre: "Gmail", descripcion: "Tu punto de bandeja indispensable y la llave en un ecosistema robusto universal de trabajo.", url: "https://mail.google.com/mail/u/0/?ogbl#inbox" },
@@ -160,6 +169,8 @@ const datosMarcadores = {
         { nombre: "30 Days Of JavaScript", descripcion: "Recurso para aprender a usar JavaScript.", url: "https://github.com/Asabeneh/30-Days-Of-JavaScript" },
         { nombre: "Halloween Dev", descripcion: "Recurso para aprender a hacer ejercicios de programación JavaScript.", url: "https://www.halloween.dev/es" },
         { nombre: "PaloAlto Networks", descripcion: "Cursos GRATUITOS de formación en ciberseguridad.", url: "https://www.paloaltonetworks.es/cyberpedia/free-cybersecurity-education-courses" },
+        { nombre: "SQLBolt", descripcion: "SQLBolt es una web con una serie de lecciones y ejercicios interactivos diseñados para ayudarte a aprender SQL rápidamente directamente en tu navegador.", url: "https://sqlbolt.com/" },
+        { nombre: "SQL Practice", descripcion: "Practica consultas SQL con una terminal en línea. Resuelve problemas de consultas SQL utilizando una base de datos de práctica. Aprende y mejora tus habilidades en SQL.", url: "https://www.sql-practice.com/" },
     ]
 };
 
