@@ -22,7 +22,6 @@ const datosMarcadores = {
         { nombre: "Juego Sudoku", descripcion: "Juego Sudoku.", url: "https://jeironpro.github.io/juego-sudoku" },
         { nombre: "Juego Tic Tac Toe", descripcion: "Tic Tac Toe.", url: "https://jeironpro.github.io/juego-tic-tac-toe" },
         { nombre: "Marcadores", descripcion: "Marcadores.", url: "https://jeironpro.github.io/marcadores" },
-        { nombre: "Portafolio Jeironpro", descripcion: "Portafolio Jeironpro.", url: "https://portafolio-jeironpro.pages.dev/" },
         { nombre: "Web Algoritmos", descripcion: "Algoritmos.", url: "https://jeironpro.github.io/web-algoritmos" },
         { nombre: "Web Calculadora", descripcion: "Calculadora.", url: "https://jeironpro.github.io/web-calculadora" },
         { nombre: "Web Calculadora Edad", descripcion: "Calculadora Edad.", url: "https://jeironpro.github.io/web-calculadora-edad" },
@@ -53,6 +52,7 @@ const datosMarcadores = {
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
     	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
     	{ nombre: "Web Naruto", descripcion: "Personajes del anime naruto.", url: "https://web-naruto.pages.dev/" },
+    	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.onrender.com/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
