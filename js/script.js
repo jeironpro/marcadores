@@ -16,7 +16,7 @@ const datosMarcadores = {
         { nombre: "Juego 7 Letras", descripcion: "Juego 7 Letras.", url: "https://jeironpro.github.io/juego-7-letras" },
         { nombre: "Juego Memoriza Carta", descripcion: "Memoriza Carta.", url: "https://jeironpro.github.io/juego-memoriza-carta" },
         { nombre: "Juego Palabra Oculta", descripcion: "Juego Palabra Oculta.", url: "https://jeironpro.github.io/juego-palabra-oculta" },
-        { nombre: "Juego Preguntas Respuestas", descripcion: "Juego Preguntas Respuestas.", url: "https://jeironpro.github.io/juego-preguntas-respuestas" },
+        { nombre: "Juego Preguntas Respuestas", descripcion: "Juego Preguntas Respuestas.", url: "https://juego-preguntas-respuestas.pages.dev/" },
         { nombre: "Juego Serpiente", descripcion: "Serpiente.", url: "https://jeironpro.github.io/juego-serpiente" },
         { nombre: "Juego Sopa Letras", descripcion: "Juego Sopa Letras.", url: "https://jeironpro.github.io/juego-sopa-letras" },
         { nombre: "Juego Sudoku", descripcion: "Juego Sudoku.", url: "https://jeironpro.github.io/juego-sudoku" },
@@ -100,6 +100,7 @@ const datosMarcadores = {
         { nombre: "Railway", descripcion: "Railway es una plataforma en la nube integral para el despliegue de aplicaciones web, servidores, bases de datos y mucho más, con escalado, monitorización y seguridad automáticos.", url: "https://railway.com/dashboard" },
         { nombre: "Appwrite", descripcion: "Appwrite es una plataforma de código abierto para crear y escalar aplicaciones más rápidamente, que ofrece autenticación, bases de datos, almacenamiento, funciones, mensajería, tiempo real y alojamiento web, todo en un mismo lugar.", url: "https://cloud.appwrite.io/" },
         { nombre: "Spline", descripcion: "Spline es una plataforma de diseño para crear y colaborar en experiencias interactivas listas para la producción en tiempo real.", url: "https://spline.design/" },
+        { nombre: "Fly io", descripcion: "La plataforma para desarrolladores que solo quieren lanzar sus productos. Impulsada por entornos de pruebas que te permiten desplegar cualquier código con total confianza.", url: "https://fly.io/dashboard/" },
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
