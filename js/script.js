@@ -47,6 +47,7 @@ const datosMarcadores = {
         { nombre: "Web Reproductor Musica", descripcion: "Reproductor Musica.", url: "https://jeironpro.github.io/web-reproductor-musica" },
         { nombre: "Web Tests Daw", descripcion: "Tests Daw.", url: "https://jeironpro.github.io/web-tests-daw" },
         { nombre: "Web Curso DCS", descripcion: "Curso DCS.", url: "https://jeironpro.github.io/web-curso-dcs" },
+        { nombre: "Web Pomodoro", descripcion: "Pomodoro", url: "https://web-pomodoro-44r.pages.dev" },
     ],
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
@@ -104,6 +105,7 @@ const datosMarcadores = {
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
+        { nombre: "NVIDIA models", descripcion: "Implementa y escala modelos en la infraestructura de GPU que prefieras con los microservicios de inferencia NVIDIA NIM.", url: "https://build.nvidia.com/models" },
     ],
     "IA": [
         { nombre: "ChatGPT", descripcion: "Plataforma modelo y de asistencia de conversación e ingeniería de sistema más famosa.", url: "https://chatgpt.com/" },
