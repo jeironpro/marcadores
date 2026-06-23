@@ -50,6 +50,7 @@ const datosMarcadores = {
         { nombre: "Web Pomodoro", descripcion: "Pomodoro", url: "https://web-pomodoro-44r.pages.dev" },
         { nombre: "Web Pokemon", descripcion: "Pokemones de todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
     	{ nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
+    	{ nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
     ],
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
