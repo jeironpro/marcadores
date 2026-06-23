@@ -54,7 +54,7 @@ const datosMarcadores = {
     ],
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
-    	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.onrender.com/" },
+    	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
