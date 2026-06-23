@@ -48,11 +48,11 @@ const datosMarcadores = {
         { nombre: "Web Tests Daw", descripcion: "Tests Daw.", url: "https://jeironpro.github.io/web-tests-daw" },
         { nombre: "Web Curso DCS", descripcion: "Curso DCS.", url: "https://jeironpro.github.io/web-curso-dcs" },
         { nombre: "Web Pomodoro", descripcion: "Pomodoro", url: "https://web-pomodoro-44r.pages.dev" },
+        { nombre: "Web Pokemon", descripcion: "Pokemones de todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
+    	{ nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
     ],
     "Proyectos FullStack": [
     	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
-    	{ nombre: "Web Pokemon", descripcion: "Pokemones todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
-    	{ nombre: "Web Naruto", descripcion: "Personajes del anime naruto.", url: "https://web-naruto.pages.dev/" },
     	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.onrender.com/" },
     ],
     "Documentación": [
