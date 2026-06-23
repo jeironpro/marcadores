@@ -51,9 +51,6 @@ const datosMarcadores = {
         { nombre: "Web Pokemon", descripcion: "Pokemones de todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
     	{ nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
     	{ nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
-    ],
-    "Proyectos FullStack": [
-    	{ nombre: "Planical", descripcion: "Aplicación de calendario y gestión de tiempo.", url: "https://planical.pages.dev/login" },
     	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
     ],
     "Documentación": [
