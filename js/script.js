@@ -165,7 +165,7 @@ const datosMarcadores = {
         { nombre: "Spec Kit", descripcion: "Un conjunto de herramientas de código abierto que te permite centrarte en escenarios de producto y resultados predecibles en lugar de programar cada pieza desde cero.", url: "https://github.com/github/spec-kit" },
         { nombre: "GSAP", descripcion: "Una biblioteca de animación JavaScript extremadamente robusta diseñada para profesionales.", url: "https://gsap.com/" },
         { nombre: "Animejs", descripcion: "Una biblioteca JavaScript rápida y flexible para animar HTML, WebGL, CSS, CANVAS 2D, SVG. ", url: "https://animejs.com/" },
-        { nombre: ""FreeDomain, descripcion: "Dominio gratuito para todos.", url: "https://github.com/DigitalPlatDev/FreeDomain" },
+        { nombre: "FreeDomain", descripcion: "Dominio gratuito para todos.", url: "https://github.com/DigitalPlatDev/FreeDomain" },
         { nombre: "Fontpair", descripcion: "Descubre y prueba fuentes, colores e iconos seleccionados por diseñadores profesionales. Tu kit de marca y sistema de diseño, generados al instante.", url: "https://fontpair.co/" },
         { nombre: "ios builder", descripcion: "Builder es una herramienta de línea de comandos para el desarrollo de iOS sin necesidad de un Mac. Utiliza GitHub Actions para compilaciones remotas y MobAI para el desarrollo en el dispositivo.", url: "https://github.com/MobAI-App/ios-builder" },
         { nombre: "Sileo", descripcion: "Un componente de notificación con personalidad para React. Transformación SVG, física de resorte y una API mínima: hermoso por defecto.", url: "https://sileo.aaryan.design/" },
