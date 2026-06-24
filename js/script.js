@@ -1,4 +1,3 @@
-// Base de datos de los enlaces seccionados por categoría
 const datosMarcadores = {
     "Redes Sociales": [
         { nombre: "LinkedIn", descripcion: "Red profesional para conectar con otros profesionales y empresas.", url: "https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" },
@@ -49,9 +48,9 @@ const datosMarcadores = {
         { nombre: "Web Curso DCS", descripcion: "Curso DCS.", url: "https://jeironpro.github.io/web-curso-dcs" },
         { nombre: "Web Pomodoro", descripcion: "Pomodoro", url: "https://web-pomodoro-44r.pages.dev" },
         { nombre: "Web Pokemon", descripcion: "Pokemones de todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
-    	{ nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
-    	{ nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
-    	{ nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
+        { nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
+        { nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
+        { nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
@@ -117,14 +116,14 @@ const datosMarcadores = {
         { nombre: "Claude", descripcion: "El LLM superior creado por Anthropic, amigable, altamente humano y excelente programador.", url: "https://claude.ai/new" },
         { nombre: "Gamma", descripcion: "Gamma es tu socio de diseño de IA para presentaciones, sitios web, publicaciones en redes sociales y más, para que puedas concentrarte en lo que mejor haces.", url: "https://gamma.app/" },
         { nombre: "Mistral AI", descripcion: "La plataforma de IA más potente para empresas. Personaliza, ajusta e implementa asistentes de IA, agentes autónomos e IA multimodal con modelos abiertos.", url: "https://docs.mistral.ai/" },
-        { nombre: "Odysseus", descripcion: "Odysseus es una interfaz autoalojada para interactuar con modelos de lenguaje: chat, agentes autónomos, herramientas, servicios de modelos, correo electrónico, investigación y mucho más. Prioriza la comunicación local, la privacidad y no utiliza telemetría. Solo tú y tus modelos.", url: "https://pewdiepie-archdaemon.github.io/odysseus/" }
+        { nombre: "Odysseus", descripcion: "Odysseus es una interfaz autoalojada para interactuar con modelos de lenguaje: chat, agentes autónomos, herramientas, servicios de modelos, correo electrónico, investigación y mucho más.", url: "https://pewdiepie-archdaemon.github.io/odysseus/" }
     ],
     "Models IA": [
         { nombre: "Llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms.", url: "https://www.llama.com/" },
-        { nombre: "Qwen", descripcion: "Qwen (o Tongyi Qianwen) es una familia de modelos de lenguaje de inteligencia artificial (LLM) de alto rendimiento desarrollada por Alibaba Cloud.", url: "https://qwen.ai/qwenchat" },
-        { nombre: "Deepseek", descripcion: "Modelos de lenguaje grande (LLMs) de alto rendimiento y código abierto.", url: "https://www.deepseek.com/en/" },
-        { nombre: "Gemma", descripcion: "Gemma es una familia de modelos abiertos, ligeros y de última generación, creados a partir de la misma investigación y tecnología que se utilizó para desarrollar los modelos Gemini.", url: "https://deepmind.google/models/gemma/" },
-        { nombre: "Phi", descripcion: "Los modelos Phi ofrecen soluciones de IA rentables y de alto rendimiento en el entorno periférico, ampliando los límites de la IA generativa.", url: "https://azure.microsoft.com/en-us/products/phi" },
+        { nombre: "Qwen", descripcion: "Qwen es una familia de modelos de lenguaje de inteligencia artificial de alto rendimiento desarrollada por Alibaba Cloud.", url: "https://qwen.ai/qwenchat" },
+        { nombre: "Deepseek", descripcion: "Modelos de lenguaje grande de alto rendimiento y código abierto.", url: "https://www.deepseek.com/en/" },
+        { nombre: "Gemma", descripcion: "Gemma es una familia de modelos abiertos, ligeros y de última generación, creados a partir de la misma investigación que Gemini.", url: "https://deepmind.google/models/gemma/" },
+        { nombre: "Phi", descripcion: "Los modelos Phi ofrecen soluciones de IA rentables y de alto rendimiento en el entorno periférico.", url: "https://azure.microsoft.com/en-us/products/phi" },
     ],
     "For Developers": [
         { nombre: "Meta for Developers", descripcion: "Plataformas sobre infraestructura, apps VR, WhatsApp y software open source de Meta.", url: "https://developers.meta.com/" },
@@ -157,18 +156,18 @@ const datosMarcadores = {
         { nombre: "The System Design Primer", descripcion: "Aprender a diseñar sistemas escalables te ayudará a convertirte en un mejor ingeniero.", url: "https://github.com/donnemartin/system-design-primer" },
         { nombre: "Interviewing", descripcion: "Entrevistas simuladas anónimas con ingenieros de Meta, Google, OpenAI, Amazon y otras empresas líderes.", url: "https://interviewing.io/" },
         { nombre: "Agent Skills", descripcion: "Una forma estandarizada de dotar a los agentes de IA de nuevas capacidades y experiencia.", url: "https://agentskills.io/home" },
-        { nombre: "Skills", descripcion: "Las habilidades son capacidades reutilizables para los agentes de IA. Instálelas con un solo comando para mejorar sus agentes con acceso al conocimiento procedimental.", url: "https://www.skills.sh/" },
+        { nombre: "Skills", descripcion: "Las habilidades son capacidades reutilizables para los agentes de IA. Instálelas con un solo comando para mejorar sus agentes.", url: "https://www.skills.sh/" },
         { nombre: "Autoskills", descripcion: "Detecta automáticamente tu pila tecnológica e instala las mejores habilidades de agente de IA para tu proyecto.", url: "https://www.autoskills.sh/" },
         { nombre: "Hyper Frames", descripcion: "HyperFrames permite a los agentes de IA componer vídeos escribiendo HTML, CSS y JavaScript.", url: "https://hyperframes.heygen.com/" },
         { nombre: "Google labs code", descripcion: "Google Labs Code.", url: "https://github.com/google-labs-code" },
         { nombre: "Alg0", descripcion: "Visualizador de Algoritmos.", url: "https://www.alg0.dev/es/" },
-        { nombre: "Spec Kit", descripcion: "Un conjunto de herramientas de código abierto que te permite centrarte en escenarios de producto y resultados predecibles en lugar de programar cada pieza desde cero.", url: "https://github.com/github/spec-kit" },
+        { nombre: "Spec Kit", descripcion: "Un conjunto de herramientas de código abierto que te permite centrarte en escenarios de producto y resultados predecibles.", url: "https://github.com/github/spec-kit" },
         { nombre: "GSAP", descripcion: "Una biblioteca de animación JavaScript extremadamente robusta diseñada para profesionales.", url: "https://gsap.com/" },
-        { nombre: "Animejs", descripcion: "Una biblioteca JavaScript rápida y flexible para animar HTML, WebGL, CSS, CANVAS 2D, SVG. ", url: "https://animejs.com/" },
+        { nombre: "Animejs", descripcion: "Una biblioteca JavaScript rápida y flexible para animar HTML, WebGL, CSS, CANVAS 2D, SVG.", url: "https://animejs.com/" },
         { nombre: "FreeDomain", descripcion: "Dominio gratuito para todos.", url: "https://github.com/DigitalPlatDev/FreeDomain" },
-        { nombre: "Fontpair", descripcion: "Descubre y prueba fuentes, colores e iconos seleccionados por diseñadores profesionales. Tu kit de marca y sistema de diseño, generados al instante.", url: "https://fontpair.co/" },
-        { nombre: "ios builder", descripcion: "Builder es una herramienta de línea de comandos para el desarrollo de iOS sin necesidad de un Mac. Utiliza GitHub Actions para compilaciones remotas y MobAI para el desarrollo en el dispositivo.", url: "https://github.com/MobAI-App/ios-builder" },
-        { nombre: "Sileo", descripcion: "Un componente de notificación con personalidad para React. Transformación SVG, física de resorte y una API mínima: hermoso por defecto.", url: "https://sileo.aaryan.design/" },
+        { nombre: "Fontpair", descripcion: "Descubre y prueba fuentes, colores e iconos seleccionados por diseñadores profesionales.", url: "https://fontpair.co/" },
+        { nombre: "ios builder", descripcion: "Builder es una herramienta de línea de comandos para el desarrollo de iOS sin necesidad de un Mac.", url: "https://github.com/MobAI-App/ios-builder" },
+        { nombre: "Sileo", descripcion: "Un componente de notificación con personalidad para React. Transformación SVG, física de resorte y una API mínima.", url: "https://sileo.aaryan.design/" },
     ],
     "Google": [
         { nombre: "Gmail", descripcion: "Tu punto de bandeja indispensable y la llave en un ecosistema robusto universal de trabajo.", url: "https://mail.google.com/mail/u/0/?ogbl#inbox" },
@@ -188,42 +187,38 @@ const datosMarcadores = {
         { nombre: "30 Days Of JavaScript", descripcion: "Recurso para aprender a usar JavaScript.", url: "https://github.com/Asabeneh/30-Days-Of-JavaScript" },
         { nombre: "Halloween Dev", descripcion: "Recurso para aprender a hacer ejercicios de programación JavaScript.", url: "https://www.halloween.dev/es" },
         { nombre: "PaloAlto Networks", descripcion: "Cursos GRATUITOS de formación en ciberseguridad.", url: "https://www.paloaltonetworks.es/cyberpedia/free-cybersecurity-education-courses" },
-        { nombre: "SQLBolt", descripcion: "SQLBolt es una web con una serie de lecciones y ejercicios interactivos diseñados para ayudarte a aprender SQL rápidamente directamente en tu navegador.", url: "https://sqlbolt.com/" },
-        { nombre: "SQL Practice", descripcion: "Practica consultas SQL con una terminal en línea. Resuelve problemas de consultas SQL utilizando una base de datos de práctica. Aprende y mejora tus habilidades en SQL.", url: "https://www.sql-practice.com/" },
+        { nombre: "SQLBolt", descripcion: "SQLBolt es una web con lecciones y ejercicios interactivos para aprender SQL rápidamente.", url: "https://sqlbolt.com/" },
+        { nombre: "SQL Practice", descripcion: "Practica consultas SQL con una terminal en línea. Resuelve problemas de consultas SQL.", url: "https://www.sql-practice.com/" },
         { nombre: "Computer science", descripcion: "Camino hacia una educación autodidacta gratuita en Ciencias de la Computación.", url: "https://github.com/ossu/computer-science" },
-        { nombre: "30 Days Of Python", descripcion: "El reto de programación en Python de 30 días es una guía paso a paso para aprender el lenguaje de programación Python en 30 días.", url: "https://github.com/Asabeneh/30-Days-Of-Python" },
-        { nombre: "Project based learning", descripcion: "Una lista de tutoriales de programación en los que los aspirantes a desarrolladores de software aprenden a crear una aplicación desde cero.", url: "https://github.com/practical-tutorials/project-based-learning" },
+        { nombre: "30 Days Of Python", descripcion: "El reto de programación en Python de 30 días es una guía paso a paso para aprender Python.", url: "https://github.com/Asabeneh/30-Days-Of-Python" },
+        { nombre: "Project based learning", descripcion: "Una lista de tutoriales de programación donde aprendes a crear una aplicación desde cero.", url: "https://github.com/practical-tutorials/project-based-learning" },
         { nombre: "Build your own x", descripcion: "Domina la programación recreando tus tecnologías favoritas desde cero.", url: "https://github.com/codecrafters-io/build-your-own-x" },
-        { nombre: "Developer roadmap", descripcion: "Hojas de ruta interactivas, guías y otros contenidos educativos para ayudar a los desarrolladores a crecer en sus carreras.", url: "https://github.com/nilbuild/developer-roadmap" },
-        { nombre: "Free Code Camp", descripcion: "El código fuente y el plan de estudios de freeCodeCamp.org son de código abierto. Aprende matemáticas, programación e informática gratis.", url: "https://github.com/freeCodeCamp/freeCodeCamp" },
+        { nombre: "Developer roadmap", descripcion: "Hojas de ruta interactivas, guías y otros contenidos educativos para desarrolladores.", url: "https://github.com/nilbuild/developer-roadmap" },
+        { nombre: "Free Code Camp", descripcion: "El código fuente y el plan de estudios de freeCodeCamp.org son de código abierto.", url: "https://github.com/freeCodeCamp/freeCodeCamp" },
     ]
 };
 
-// Rutina corta expresada usando Arrow Function para crear nodos de texto
+let categoriaActual = null;
+
 const agregarTextoAElemento = (elemento, texto) => {
-    const nodoTexto = document.createTextNode(texto);
-    elemento.appendChild(nodoTexto);
+    elemento.appendChild(document.createTextNode(texto));
 };
 
-// Función principal declarativa que inicia las mecánicas
 function inicializarAplicacion() {
     configurarCambioTema();
     configurarMenuMovil();
     renderizarCategorias();
+    configurarBusquedaSeccion();
 
-    // Obtener nombres de las categorías evitando funciones anónimas
     const categoriasBase = Object.keys(datosMarcadores);
     if (categoriasBase.length > 0) {
         mostrarEnlacesPorCategoria(categoriasBase[0]);
     }
 }
 
-// Función declarativa para manejar el alternador de temas sin alterar textos
 function cambiarTema() {
     const elementoRaiz = document.documentElement;
     const temaActual = elementoRaiz.getAttribute("data-tema");
-
-    // Modificar únicamente el atributo para cambiar las variables globales
     if (temaActual === "oscuro") {
         elementoRaiz.removeAttribute("data-tema");
     } else {
@@ -231,7 +226,6 @@ function cambiarTema() {
     }
 }
 
-// Función declarativa central para buscar nuestro elemento tema en el footer
 function configurarCambioTema() {
     const botonTema = document.getElementById("botonCambiarTema");
     if (botonTema) {
@@ -239,7 +233,6 @@ function configurarCambioTema() {
     }
 }
 
-// Función declarativa para limpiar contenedores visuales
 function limpiarContenedor(contenedor) {
     if (!contenedor) return;
     while (contenedor.firstChild) {
@@ -247,21 +240,24 @@ function limpiarContenedor(contenedor) {
     }
 }
 
-// Función declarativa vinculada a los botones en el panel
 function manejarClicCategoria(evento) {
     const botonesLateral = document.querySelectorAll(".boton-categoria");
-
-    for (const iteradorBoton of botonesLateral) {
-        iteradorBoton.classList.remove("activo");
+    for (const boton of botonesLateral) {
+        boton.classList.remove("activo");
     }
 
     const botonPresionado = evento.currentTarget;
     botonPresionado.classList.add("activo");
 
-    const nombreCategoriaDetectada = botonPresionado.getAttribute("data-nombre");
-    mostrarEnlacesPorCategoria(nombreCategoriaDetectada);
+    const nombreCategoria = botonPresionado.getAttribute("data-nombre");
+    categoriaActual = nombreCategoria;
+    mostrarEnlacesPorCategoria(nombreCategoria);
 
-    // Cerrar la interfaz móvil al seleccionar para maximizar confort UX
+    const buscadorSeccion = document.getElementById("buscadorSeccion");
+    if (buscadorSeccion) {
+        buscadorSeccion.value = "";
+    }
+
     const panelLateral = document.getElementById("panelCategorias");
     const overlay = document.getElementById("overlayMovil");
     if (panelLateral && overlay) {
@@ -270,20 +266,17 @@ function manejarClicCategoria(evento) {
     }
 }
 
-// Función declarativa para controlar la entrada/salida del menú modal en dispositivos pequeños
 function configurarMenuMovil() {
     const botonMenu = document.getElementById("botonMenuMovil");
     const overlay = document.getElementById("overlayMovil");
     const panelLateral = document.getElementById("panelCategorias");
 
     if (botonMenu && overlay && panelLateral) {
-        // Abrir al presionar la hamburguesa
         botonMenu.addEventListener("click", function () {
             panelLateral.classList.add("abierto");
             overlay.classList.add("activo");
         });
 
-        // Cerrar si hace clic por fuera
         overlay.addEventListener("click", function () {
             panelLateral.classList.remove("abierto");
             overlay.classList.remove("activo");
@@ -291,96 +284,157 @@ function configurarMenuMovil() {
     }
 }
 
-// Función declarativa mayor para renderizar listas dinámicas en el lateral
+function obtenerRutaIcono(nombre) {
+    const nombreLimpio = nombre.toLowerCase().replace(/[^a-z0-9]/g, "_");
+    const extensiones = ["svg", "jpg", "jpeg", "ico", "gif", "png", "webp"];
+    return { baseRuta: `icon/enlaces/${nombreLimpio}`, extensiones };
+}
+
 function renderizarCategorias() {
-    // Apuntamos al contenedor interno debido a la nueva estructura HTML
-    const panelGeneral = document.querySelector(".panel-lateral-fijo");
-    if (!panelGeneral) return;
+    const panel = document.querySelector(".panel-lateral-fijo");
+    if (!panel) return;
 
-    const arregloCategorias = Object.keys(datosMarcadores);
+    limpiarContenedor(panel);
+    const categorias = Object.keys(datosMarcadores);
 
-    for (let indice = 0; indice < arregloCategorias.length; indice++) {
-        const nombreSueltoCategoria = arregloCategorias[indice];
-
-        const botonElementoUnico = document.createElement("button");
-        botonElementoUnico.classList.add("boton-categoria");
-        botonElementoUnico.setAttribute("data-nombre", nombreSueltoCategoria);
+    categorias.forEach((nombre, indice) => {
+        const boton = document.createElement("button");
+        boton.classList.add("boton-categoria");
+        boton.setAttribute("data-nombre", nombre);
 
         if (indice === 0) {
-            botonElementoUnico.classList.add("activo");
+            boton.classList.add("activo");
+            categoriaActual = nombre;
         }
 
-        agregarTextoAElemento(botonElementoUnico, nombreSueltoCategoria);
-        botonElementoUnico.addEventListener("click", manejarClicCategoria);
-        panelGeneral.appendChild(botonElementoUnico);
-    }
+        const textoNombre = document.createElement("span");
+        textoNombre.textContent = nombre;
+        boton.appendChild(textoNombre);
+
+        const contador = document.createElement("span");
+        contador.classList.add("contador-categoria");
+        contador.textContent = datosMarcadores[nombre].length;
+        boton.appendChild(contador);
+
+        boton.addEventListener("click", manejarClicCategoria);
+        panel.appendChild(boton);
+    });
 }
 
-// Función declarativa para estructurar cada artículo presentador
-function crearTarjetaEnlace(datosCompletosEnlace) {
-    const contenedorTarjetaSuelto = document.createElement("article");
-    contenedorTarjetaSuelto.classList.add("tarjeta-enlace");
+function crearTarjetaEnlace(datos, conAnimacion = false) {
+    const tarjeta = document.createElement("article");
+    tarjeta.classList.add("tarjeta-enlace");
+    if (conAnimacion) {
+        tarjeta.classList.add("animacion-entrada");
+    }
 
-    const contenedorEncabezado = document.createElement("div");
-    contenedorEncabezado.classList.add("encabezado-tarjeta");
+    const encabezado = document.createElement("div");
+    encabezado.classList.add("encabezado-tarjeta");
 
-    const iconoEnlace = document.createElement("img");
-    iconoEnlace.classList.add("icono-tarjeta");
-    const nombreLimpio = datosCompletosEnlace.nombre.toLowerCase().replace(/[^a-z0-9]/g, "_");
-    const EXTENSIONES_ICONO = ["svg", "jpg", "jpeg", "ico", "gif", "png", "webp"];
-    let indiceExtension = 0;
-    const baseRuta = `icon/enlaces/${nombreLimpio}`;
+    const icono = document.createElement("img");
+    icono.classList.add("icono-tarjeta");
+    const { baseRuta, extensiones } = obtenerRutaIcono(datos.nombre);
+    let indiceExt = 0;
+
     function cargarIcono() {
-        if (indiceExtension >= EXTENSIONES_ICONO.length) {
-            iconoEnlace.style.display = "none";
+        if (indiceExt >= extensiones.length) {
+            icono.style.display = "none";
             return;
         }
-        iconoEnlace.setAttribute("src", `${baseRuta}.${EXTENSIONES_ICONO[indiceExtension]}`);
-        indiceExtension++;
+        icono.setAttribute("src", `${baseRuta}.${extensiones[indiceExt]}`);
+        indiceExt++;
     }
-    iconoEnlace.setAttribute("alt", `Icono de ${datosCompletosEnlace.nombre}`);
-    iconoEnlace.addEventListener("error", cargarIcono);
+    icono.setAttribute("alt", `Icono de ${datos.nombre}`);
+    icono.addEventListener("error", cargarIcono);
     cargarIcono();
 
-    const tituloDeLaTarjeta = document.createElement("h2");
-    tituloDeLaTarjeta.classList.add("titulo-enlace");
-    agregarTextoAElemento(tituloDeLaTarjeta, datosCompletosEnlace.nombre);
+    const titulo = document.createElement("h2");
+    titulo.classList.add("titulo-enlace");
+    agregarTextoAElemento(titulo, datos.nombre);
 
-    contenedorEncabezado.appendChild(iconoEnlace);
-    contenedorEncabezado.appendChild(tituloDeLaTarjeta);
+    encabezado.appendChild(icono);
+    encabezado.appendChild(titulo);
 
-    const detalleDeLaTarjeta = document.createElement("p");
-    detalleDeLaTarjeta.classList.add("descripcion-enlace");
-    agregarTextoAElemento(detalleDeLaTarjeta, datosCompletosEnlace.descripcion);
+    const descripcion = document.createElement("p");
+    descripcion.classList.add("descripcion-enlace");
+    agregarTextoAElemento(descripcion, datos.descripcion);
 
-    const vinculoDeLaTarjeta = document.createElement("a");
-    vinculoDeLaTarjeta.classList.add("boton-abrir");
-    vinculoDeLaTarjeta.setAttribute("href", datosCompletosEnlace.url);
-    vinculoDeLaTarjeta.setAttribute("target", "_blank");
-    vinculoDeLaTarjeta.setAttribute("rel", "noopener noreferrer");
-    agregarTextoAElemento(vinculoDeLaTarjeta, "Abrir Enlace");
+    const botonAbrir = document.createElement("a");
+    botonAbrir.classList.add("boton-abrir");
+    botonAbrir.setAttribute("href", datos.url);
+    botonAbrir.setAttribute("target", "_blank");
+    botonAbrir.setAttribute("rel", "noopener noreferrer");
+    agregarTextoAElemento(botonAbrir, "Abrir Enlace");
 
-    contenedorTarjetaSuelto.appendChild(contenedorEncabezado);
-    contenedorTarjetaSuelto.appendChild(detalleDeLaTarjeta);
-    contenedorTarjetaSuelto.appendChild(vinculoDeLaTarjeta);
+    tarjeta.appendChild(encabezado);
+    tarjeta.appendChild(descripcion);
+    tarjeta.appendChild(botonAbrir);
 
-    return contenedorTarjetaSuelto;
+    return tarjeta;
 }
 
-// Función mayor encargada del control de la sección de tarjetas
-function mostrarEnlacesPorCategoria(categoriaPedida) {
-    const cuadroParaLosEnlaces = document.getElementById("areaEnlaces");
-    if (!cuadroParaLosEnlaces) return;
-
-    limpiarContenedor(cuadroParaLosEnlaces);
-
-    const todosLosEnlacesPertenecientes = datosMarcadores[categoriaPedida] || [];
-
-    for (const enlaceSingular of todosLosEnlacesPertenecientes) {
-        const tarjetaEnsamblePreparada = crearTarjetaEnlace(enlaceSingular);
-        cuadroParaLosEnlaces.appendChild(tarjetaEnsamblePreparada);
+function actualizarEstadoVacio(mostrar) {
+    const estadoVacio = document.getElementById("estadoVacio");
+    const areaEnlaces = document.getElementById("areaEnlaces");
+    if (estadoVacio) {
+        if (mostrar) {
+            estadoVacio.classList.add("activo");
+            areaEnlaces.style.display = "none";
+        } else {
+            estadoVacio.classList.remove("activo");
+            areaEnlaces.style.display = "";
+        }
     }
 }
 
-// Inicialización de la aplicación
+function actualizarContadorSeccion(total, filtrados) {
+    const contador = document.getElementById("contadorSeccion");
+    if (contador) {
+        if (total === filtrados) {
+            contador.textContent = `${total} enlace${total !== 1 ? 's' : ''}`;
+        } else {
+            contador.textContent = `${filtrados} de ${total}`;
+        }
+    }
+}
+
+function mostrarEnlacesPorCategoria(categoria, terminoBusqueda = "") {
+    const area = document.getElementById("areaEnlaces");
+    if (!area) return;
+
+    limpiarContenedor(area);
+
+    const todosLosEnlaces = datosMarcadores[categoria] || [];
+    let enlacesFiltrados = todosLosEnlaces;
+
+    if (terminoBusqueda.trim() !== "") {
+        const termino = terminoBusqueda.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        enlacesFiltrados = todosLosEnlaces.filter(enlace => {
+            const nombre = enlace.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            const desc = enlace.descripcion.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            return nombre.includes(termino) || desc.includes(termino);
+        });
+    }
+
+    actualizarContadorSeccion(todosLosEnlaces.length, enlacesFiltrados.length);
+    actualizarEstadoVacio(enlacesFiltrados.length === 0);
+
+    enlacesFiltrados.forEach((enlace, i) => {
+        const tarjeta = crearTarjetaEnlace(enlace, true);
+        tarjeta.style.animationDelay = `${i * 0.04}s`;
+        area.appendChild(tarjeta);
+    });
+}
+
+function configurarBusquedaSeccion() {
+    const input = document.getElementById("buscadorSeccion");
+    if (!input) return;
+
+    input.addEventListener("input", function () {
+        if (categoriaActual) {
+            mostrarEnlacesPorCategoria(categoriaActual, this.value);
+        }
+    });
+}
+
 window.addEventListener("DOMContentLoaded", inicializarAplicacion);
