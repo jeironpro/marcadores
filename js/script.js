@@ -108,7 +108,6 @@ const datosMarcadores = {
     ],
     "APIs": [
         { nombre: "OpenAI API", descripcion: "Integración directa de inteligencia artificial y consumo de lenguajes o imágenes OpenAI.", url: "https://developers.openai.com/api/docs/quickstart" },
-        { nombre: "NVIDIA models", descripcion: "Implementa y escala modelos en la infraestructura de GPU que prefieras con los microservicios de inferencia NVIDIA NIM.", url: "https://build.nvidia.com/models" },
     ],
     "IA": [
         { nombre: "ChatGPT", descripcion: "Plataforma modelo y de asistencia de conversación e ingeniería de sistema más famosa.", url: "https://chatgpt.com/" },
@@ -124,6 +123,9 @@ const datosMarcadores = {
         { nombre: "Deepseek", descripcion: "Modelos de lenguaje grande de alto rendimiento y código abierto.", url: "https://www.deepseek.com/en/" },
         { nombre: "Gemma", descripcion: "Gemma es una familia de modelos abiertos, ligeros y de última generación, creados a partir de la misma investigación que Gemini.", url: "https://deepmind.google/models/gemma/" },
         { nombre: "Phi", descripcion: "Los modelos Phi ofrecen soluciones de IA rentables y de alto rendimiento en el entorno periférico.", url: "https://azure.microsoft.com/en-us/products/phi" },
+        { nombre: "NVIDIA models", descripcion: "Implementa y escala modelos en la infraestructura de GPU que prefieras con los microservicios de inferencia NVIDIA NIM.", url: "https://build.nvidia.com/models" },
+        { nombre: "OpenRouter", descripcion: "Interfaz unificada para LLM.", url: "https://openrouter.ai/" },
+        { nombre: "Mistral AI", descripcion: "La plataforma de IA más potente para empresas. Personalice, optimice e implemente asistentes de IA, agentes autónomos e IA multimodal con modelos abiertos.", url: "https://admin.mistral.ai/" },
     ],
     "For Developers": [
         { nombre: "Meta for Developers", descripcion: "Plataformas sobre infraestructura, apps VR, WhatsApp y software open source de Meta.", url: "https://developers.meta.com/" },
@@ -174,6 +176,7 @@ const datosMarcadores = {
         { nombre: "Google Fonts", descripcion: "Inmensurable repositorio canónico de pesos y familias de texto para tus estilos de internet.", url: "https://fonts.google.com/" },
         { nombre: "Google Icons", descripcion: "Símbolos súper estéticos (Material Symbols) proveídos como glifos tipográficos para tus vistas.", url: "https://fonts.google.com/icons" },
         { nombre: "Contraseña de aplicación", descripcion: "Control maestro de tokens de autorización localizados listos para habilitarle puertos al software subyacente.", url: "https://myaccount.google.com/apppasswords" },
+        { nombre: "Google AI Studio", descripcion: "Google AI Studio es un entorno de desarrollo basado en web que permite diseñar prototipos rápidos y crear aplicaciones funcionales utilizando los modelos de inteligencia artificial generativa de Google.", url: "https://aistudio.google.com/" },
     ],
     "Frontend Devs": [
         { nombre: "Coding Stella", descripcion: "Directrices estilísticas en vivo aportando resoluciones innovadoras al mundo frontend.", url: "https://github.com/codingstella/" },
