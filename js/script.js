@@ -51,6 +51,7 @@ const datosMarcadores = {
         { nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
         { nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
         { nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
+        { nombre: "Juego trivia", descripcion: "Juego de trivia.", url: "https://juego-trivia.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
