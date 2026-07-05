@@ -52,6 +52,9 @@ const datosMarcadores = {
         { nombre: "Web refprog", descripcion: "Un compendio visual y practico de conceptos fundamentales de programación", url: "https://jeironpro.github.io/web-refprog/" },
         { nombre: "Web generador cv", descripcion: "Generador de currículum vitae en PDF con formulario web en 4 pasos.", url: "https://web-generador-cv.pages.dev/" },
         { nombre: "Juego trivia", descripcion: "Juego de trivia.", url: "https://juego-trivia.pages.dev/" },
+        { nombre: "Web Dados", descripcion: "Lanza dados de manera interactiva.", url: "https://jeironpro.github.io/web-dados/" },
+        { nombre: "Web Color Picker", descripcion: "Selector de color interactivo con visualización en RGB, CMYK, HSV y HSL.", url: "https://jeironpro.github.io/web-color-picker/" },
+        { nombre: "Web Ruleta", descripcion: "Ruleta interactiva en una sola pagina. Configura numeros o nombres personalizados desde el panel lateral y haz girar la ruleta.", url: "https://jeironpro.github.io/web-ruleta/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
