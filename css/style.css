@@ -198,6 +198,24 @@ body {
     color: var(--color-acento-texto);
 }
 
+.total-enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    border-top: 2px solid var(--color-borde);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.total-enlaces .contador-categoria {
+    background-color: var(--color-acento);
+    color: var(--color-acento-texto);
+    font-size: 0.8rem;
+}
+
 /* Barra de Búsqueda por Sección */
 .barra-seccion {
     display: flex;

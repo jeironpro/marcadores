@@ -6,8 +6,8 @@ const datosMarcadores = {
         { nombre: "Facebook", descripcion: "Red social para conectar con amistades, familiares y comunidades de personas que comparten tus intereses.", url: "https://www.facebook.com/" },
     ],
     "Gestión": [
-        { nombre: "GitHub", descripcion: "Plataforma principal para alojamiento de código e iteración de desarrollo.", url: "https://github.com/jeironpro?tab=repositories" },
-        { nombre: "Jira", descripcion: "Software de seguimiento de incidentes y tablero ágil de proyectos.", url: "https://jeironpro.atlassian.net/jira/for-you" },
+        { nombre: "GitHub", descripcion: "Plataforma principal para alojamiento de código e iteración de desarrollo.", url: "https://github.com/" },
+        { nombre: "Jira", descripcion: "Software de seguimiento de incidentes y tablero ágil de proyectos.", url: "https://www.atlassian.com/es/software/jira" },
         { nombre: "phpMyAdmin", descripcion: "Administración visual y rápida para bases de datos MySQL y MariaDB.", url: "http://localhost/phpMyAdmin/index.php?route=/" },
     ],
     "Mis páginas web": [
@@ -76,7 +76,7 @@ const datosMarcadores = {
     "Herramientas": [
         { nombre: "Supabase", descripcion: "Alternativa Backend-as-a-Service escalable basada de en PostgreSQL.", url: "https://supabase.com/dashboard" },
         { nombre: "Firebase", descripcion: "Alojamiento real-time, bases no-relacionales y utilidades generales que ofrece Google.", url: "https://console.firebase.google.com/" },
-        { nombre: "Docker", descripcion: "Panel analítico de administración a tus imágenes publicadas en el Hub.", url: "https://app.docker.com/accounts/jeironpro" },
+        { nombre: "Docker", descripcion: "Panel analítico de administración a tus imágenes publicadas en el Hub.", url: "https://app.docker.com/" },
         { nombre: "PlanetScale", descripcion: "Bases de datos relacionales sin servidor creadas para la máxima escalabilidad y bifurcación.", url: "https://planetscale.com/" },
         { nombre: "Turso", descripcion: "Servicios de bases orientadas a SQLite perimetral o en los bordes para baja latencia.", url: "https://turso.tech/" },
         { nombre: "Upstash", descripcion: "Solución sin motor o infraestructura para Redis, analítica o mensajería Kafka.", url: "https://upstash.com/" },
@@ -84,8 +84,8 @@ const datosMarcadores = {
         { nombre: "Code Wiki", descripcion: "Repositorio online sobre pautas estéticas de ingeniería centralizado por Google.", url: "https://codewiki.google/" },
         { nombre: "RenderCV", descripcion: "Generación de Currículum en PDF usando un código base como infraestructura textual.", url: "https://rendercv.com/" },
         { nombre: "Online CSS Code Quality", descripcion: "Validación métrica por Project Wallace acerca de tus hojas de estilos y robustez.", url: "https://www.projectwallace.com/css-code-quality" },
-        { nombre: "Vercel", descripcion: "Servidor súper rápido y red de distribución orientada especialmente a arquitecturas UI.", url: "https://vercel.com/new?teamSlug=jeironpros-projects" },
-        { nombre: "Sentry", descripcion: "Tablero centralizado e integrado para trackear errores en ambientes web críticos en vivo.", url: "https://jeironpro.sentry.io/issues/" },
+        { nombre: "Vercel", descripcion: "Servidor súper rápido y red de distribución orientada especialmente a arquitecturas UI.", url: "https://vercel.com/" },
+        { nombre: "Sentry", descripcion: "Tablero centralizado e integrado para trackear errores en ambientes web críticos en vivo.", url: "https://sentry.io/welcome/" },
         { nombre: "DrawSQL", descripcion: "Plataforma estética para diagramar visualmente tus relaciones entre tablas y esquemas.", url: "https://drawsql.app/" },
         { nombre: "RunSQL", descripcion: "Playground directo desde navegador para jugar y analizar consultas SQL reales.", url: "https://runsql.com/" },
         { nombre: "CrewAI", descripcion: "Orquestación grupal en la plataforma de desarrollo multi-agente guiado por IAs.", url: "https://app.crewai.com/studio/v2" },
@@ -121,7 +121,7 @@ const datosMarcadores = {
         { nombre: "Claude", descripcion: "El LLM superior creado por Anthropic, amigable, altamente humano y excelente programador.", url: "https://claude.ai/new" },
         { nombre: "Gamma", descripcion: "Gamma es tu socio de diseño de IA para presentaciones, sitios web, publicaciones en redes sociales y más, para que puedas concentrarte en lo que mejor haces.", url: "https://gamma.app/" },
         { nombre: "Mistral AI", descripcion: "La plataforma de IA más potente para empresas. Personaliza, ajusta e implementa asistentes de IA, agentes autónomos e IA multimodal con modelos abiertos.", url: "https://docs.mistral.ai/" },
-        { nombre: "Odysseus", descripcion: "Odysseus es una interfaz autoalojada para interactuar con modelos de lenguaje: chat, agentes autónomos, herramientas, servicios de modelos, correo electrónico, investigación y mucho más.", url: "https://pewdiepie-archdaemon.github.io/odysseus/" }
+        { nombre: "Odysseus", descripcion: "Odysseus es una interfaz autoalojada para interactuar con modelos de lenguaje: chat, agentes autónomos, herramientas, servicios de modelos, correo electrónico, investigación y mucho más.", url: "https://odysseusai.dev/" }
     ],
     "Models IA": [
         { nombre: "Llama", descripcion: "El modelo LLaMA (Large Language Model Meta AI) es una familia de modelos de lenguaje desarrollados por Meta Platforms.", url: "https://www.llama.com/" },
@@ -383,10 +383,30 @@ function configurarMenuMovil() {
     }
 }
 
-function obtenerRutaIcono(nombre) {
-    const nombreLimpio = nombre.toLowerCase().replace(/[^a-z0-9]/g, "_");
+const EXCEPCIONES_DOMINIO = ["github.io"];
+
+function esDominioExcepcion(host) {
+    host = (host || "").toLowerCase().replace(/\/$/, "");
+    return EXCEPCIONES_DOMINIO.some(exc => host === exc || host.endsWith("." + exc));
+}
+
+function obtenerRutaIcono(nombre, url) {
     const extensiones = ["svg", "jpg", "jpeg", "ico", "gif", "png", "webp"];
-    return { baseRuta: `icon/enlaces/${nombreLimpio}`, extensiones };
+    let dominioLimpio = null;
+    if (url) {
+        let host = "";
+        try {
+            host = new URL(url).hostname || "";
+        } catch (e) {
+            host = "";
+        }
+        if (host && host !== "localhost" && !esDominioExcepcion(host)) {
+            dominioLimpio = host.toLowerCase().replace(/\./g, "_").replace(/:/g, "_");
+        }
+    }
+    const nombreLimpio = nombre.toLowerCase().replace(/ /g, "_");
+    const claves = dominioLimpio ? [dominioLimpio, nombreLimpio] : [nombreLimpio];
+    return { claves, baseDir: "icon/enlaces", extensiones };
 }
 
 function renderizarCategorias() {
@@ -418,6 +438,22 @@ function renderizarCategorias() {
         boton.addEventListener("click", manejarClicCategoria);
         panel.appendChild(boton);
     });
+
+    const totalEnlaces = Object.values(datosMarcadores).reduce((suma, arr) => suma + arr.length, 0);
+
+    const panelTotal = document.createElement("div");
+    panelTotal.classList.add("total-enlaces");
+
+    const textoTotal = document.createElement("span");
+    textoTotal.textContent = "Total";
+    panelTotal.appendChild(textoTotal);
+
+    const contadorTotal = document.createElement("span");
+    contadorTotal.classList.add("contador-categoria");
+    contadorTotal.textContent = totalEnlaces;
+    panelTotal.appendChild(contadorTotal);
+
+    panel.appendChild(panelTotal);
 }
 
 function crearTarjetaEnlace(datos, conAnimacion = false) {
@@ -432,16 +468,22 @@ function crearTarjetaEnlace(datos, conAnimacion = false) {
 
     const icono = document.createElement("img");
     icono.classList.add("icono-tarjeta");
-    const { baseRuta, extensiones } = obtenerRutaIcono(datos.nombre);
-    let indiceExt = 0;
+    const { claves, baseDir, extensiones } = obtenerRutaIcono(datos.nombre, datos.url);
+    let indicePrueba = 0;
+    const combinaciones = [];
+    claves.forEach((clave) => {
+        extensiones.forEach((ext) => {
+            combinaciones.push(`${baseDir}/${clave}.${ext}`);
+        });
+    });
 
     function cargarIcono() {
-        if (indiceExt >= extensiones.length) {
+        if (indicePrueba >= combinaciones.length) {
             icono.style.display = "none";
             return;
         }
-        icono.setAttribute("src", `${baseRuta}.${extensiones[indiceExt]}`);
-        indiceExt++;
+        icono.setAttribute("src", combinaciones[indicePrueba]);
+        indicePrueba++;
     }
     icono.setAttribute("alt", `Icono de ${datos.nombre}`);
     icono.addEventListener("error", cargarIcono);
