@@ -194,6 +194,7 @@ const datosMarcadores = {
         { nombre: "SQLBolt", descripcion: "SQLBolt es una web con lecciones y ejercicios interactivos para aprender SQL rápidamente.", url: "https://sqlbolt.com/" },
         { nombre: "SQL Practice", descripcion: "Practica consultas SQL con una terminal en línea. Resuelve problemas de consultas SQL.", url: "https://www.sql-practice.com/" },
         { nombre: "Claude Code in Action", descripcion: "Claude Code in Action te enseña a usar Claude Code más allá de las tareas rápidas y a confiar en el resultado.", url: "https://anthropic.skilljar.com/claude-code-in-action" },
+        { nombre: "Learn-Anything", descripcion: "Descubre y aprende sobre cualquier tema con Learn-Anything. Nuestra plataforma gratuita e integral te conecta con los mejores recursos para cada materia.", url: "https://learn-anything.xyz/" },
     ],
     "Github": [
     	{ nombre: "FossFLOW", descripcion: "Gestión automatizable de ramas o estructuras para despliegues dinámicos.", url: "https://github.com/stan-smith/FossFLOW" },
@@ -220,7 +221,6 @@ const datosMarcadores = {
     	{ nombre: "yt-dlp", descripcion: "Un descargador de audio/vídeo de línea de comandos con muchas funciones.", url: "https://github.com/yt-dlp/yt-dlp/" },
     	{ nombre: "Ollama", descripcion: "La forma más sencilla de construir con modelos abiertos", url: "https://github.com/ollama/ollama/" },
     	{ nombre: "Fooocus", descripcion: "Fooocus presenta una nueva concepción del diseño de generadores de imágenes. El software funciona sin conexión, es de código abierto y gratuito. Al igual que muchos generadores de imágenes en línea como Midjourney, no requiere ajustes manuales; los usuarios solo deben centrarse en las indicaciones y las imágenes.", url: "https://github.com/lllyasviel/Fooocus/" },
-    	{ nombre: "Whisper", descripcion: "Whisper es un modelo de reconocimiento de voz de propósito general. Se entrena con un amplio conjunto de datos de audio diverso y, además, es un modelo multitarea capaz de realizar reconocimiento de voz multilingüe, traducción de voz e identificación de idiomas.", url: "https://github.com/openai/whisper/" },
     	{ nombre: "Plausible Analytics", descripcion: "Plausible Analytics es una herramienta de análisis web de código abierto que prioriza la privacidad. Es una alternativa ligera y sin cookies a Google Analytics. Disponible en la nube gestionada o en la edición comunitaria autohospedada.", url: "https://github.com/plausible/analytics/" },
     	{ nombre: "AppFlowy", descripcion: "AppFlowy es el espacio de trabajo de IA donde logras más sin perder el control de tus datos.", url: "https://github.com/AppFlowy-IO/AppFlowy/" },
     	{ nombre: "Penpot", descripcion: "Penpot es la plataforma de diseño de código abierto para equipos que desarrollan productos digitales a gran escala.", url: "https://github.com/penpot/penpot" },
@@ -294,6 +294,15 @@ const datosMarcadores = {
     	{ nombre: "affaan-m", descripcion: "Creador de ECC tools.", url: "https://github.com/affaan-m/" },
     	{ nombre: "WebPro", descripcion: "Creador de knip.", url: "https://github.com/webpro-nl/" },
     	{ nombre: "VoltAgent", descripcion: "Plataforma de ingeniería de agentes de IA construida sobre un marco de trabajo de agentes de IA de código abierto TypeScript.", url: "https://github.com/VoltAgent/" },
+    	{ nombre: "Orca", descripcion: "Orca es el entorno de desarrollo integrado (ADE) para trabajar con un conjunto de agentes en paralelo. Ejecuta cualquier agente de codificación con tu propia suscripción. Disponible para escritorio, dispositivos móviles y servidores VPS.", url: "https://github.com/stablyai/orca/" },
+    	{ nombre: "Graphify", descripcion: "Convierte cualquier código fuente, con su documentación, esquemas SQL, configuraciones y archivos PDF, en un grafo de conocimiento consultable. Una habilidad de /graphify para Claude Code, Cursor, Codex y Gemini CLI: análisis AST determinista local, explicación de cada arista, sin almacenamiento vectorial.", url: "https://github.com/Graphify-Labs/graphify/" },
+    	{ nombre: "OfficeCLI", descripcion: "OfficeCLI es la primera y mejor suite ofimática diseñada específicamente para que los agentes de IA lean, editen y automaticen archivos de Word, Excel y PowerPoint. Gratuita, de código abierto, ejecutable en un solo archivo binario y sin necesidad de instalación de Office.", url: "https://github.com/iOfficeAI/OfficeCLI/" },
+    	{ nombre: "OpenAI", descripcion: "Proyectos OpenAI.", url: "https://github.com/openai/" },
+    	{ nombre: "Hallmark", descripcion: "Una habilidad de diseño para Claude Code, Cursor y Codex que se niega a parecer generada por IA.", url: "https://github.com/Nutlope/hallmark/" },
+    	{ nombre: "DeepTutor", descripcion: "DeepTutor es un espacio de trabajo de aprendizaje nativo para agentes que conecta la tutoría, la resolución de problemas, la generación de cuestionarios, la investigación, la visualización y la práctica de dominio en un sistema extensible.", url: "https://github.com/HKUDS/DeepTutor/" },
+    	{ nombre: "Open Interpreter", descripcion: "Un agente de codificación optimizado para modelos de bajo coste.", url: "https://github.com/openinterpreter/openinterpreter/" },
+    	{ nombre: "APILayer", descripcion: "Una lista colectiva de API gratuitas.", url: "https://github.com/public-apis/public-apis/" },
+    	{ nombre: "draw.io", descripcion: "draw.io es un editor JavaScript del lado del cliente para la creación de diagramas en general.", url: "https://github.com/jgraph/drawio/" },
     ]
 };
 
