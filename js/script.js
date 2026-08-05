@@ -4,7 +4,7 @@ const datosMarcadores = {
         { nombre: "Threads", descripcion: "Plataforma de Meta para compartir actualizaciones de texto y unirse a conversaciones públicas.", url: "https://www.threads.com/" },
         { nombre: "Instagram", descripcion: "Red social para compartir fotos y videos.", url: "https://www.instagram.com/" },
         { nombre: "Facebook", descripcion: "Red social para conectar con amistades, familiares y comunidades de personas que comparten tus intereses.", url: "https://www.facebook.com/" },
-        { nombre: "TikTok", descripcion: "TikTok es una plataforma global para descubrir vídeos, transmitir en LIVE, comprar y más. Nuestra misión consiste en potenciar la creatividad y hacer disfrutar a la gente. Más de mil millones de personas vienen a TikTok para compartir lo que les gusta, aprender cosas nuevas y encontrar ideas para que el día a día sea más interesante.", url: "https://www.tiktok.com/" },
+        { nombre: "TikTok", descripcion: "TikTok es una plataforma global para descubrir vídeos, transmitir en LIVE, comprar y más. Nuestra misión consiste en potenciar la creatividad y hacer disfrutar a la gente.", url: "https://www.tiktok.com/" },
     ],
     "Gestión": [
         { nombre: "GitHub", descripcion: "Plataforma principal para alojamiento de código e iteración de desarrollo.", url: "https://github.com/" },
@@ -13,6 +13,7 @@ const datosMarcadores = {
     ],
     "Mis páginas web": [
         { nombre: "Portafolio", descripcion: "Mi portafolio personal de desarrollador.", url: "https://portafolio-jeironpro.pages.dev/" },
+        { nombre: "Link In Bio", descripcion: "Mi fichero de contacto.", url: "https://jeironpro.github.io/link-in-bio/" },
         { nombre: "Juego 7 Letras", descripcion: "Juego 7 Letras.", url: "https://jeironpro.github.io/juego-7-letras" },
         { nombre: "Juego Memoriza Carta", descripcion: "Memoriza Carta.", url: "https://jeironpro.github.io/juego-memoriza-carta" },
         { nombre: "Juego Palabra Oculta", descripcion: "Juego Palabra Oculta.", url: "https://jeironpro.github.io/juego-palabra-oculta" },
