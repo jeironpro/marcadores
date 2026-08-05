@@ -1,9 +1,10 @@
 const datosMarcadores = {
     "Redes Sociales": [
-        { nombre: "LinkedIn", descripcion: "Red profesional para conectar con otros profesionales y empresas.", url: "https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" },
+        { nombre: "LinkedIn", descripcion: "Red profesional para conectar con otros profesionales y empresas.", url: "https://www.linkedin.com/" },
         { nombre: "Threads", descripcion: "Plataforma de Meta para compartir actualizaciones de texto y unirse a conversaciones públicas.", url: "https://www.threads.com/" },
         { nombre: "Instagram", descripcion: "Red social para compartir fotos y videos.", url: "https://www.instagram.com/" },
         { nombre: "Facebook", descripcion: "Red social para conectar con amistades, familiares y comunidades de personas que comparten tus intereses.", url: "https://www.facebook.com/" },
+        { nombre: "TikTok", descripcion: "", url: "https://www.tiktok.com/" },
     ],
     "Gestión": [
         { nombre: "GitHub", descripcion: "Plataforma principal para alojamiento de código e iteración de desarrollo.", url: "https://github.com/" },
@@ -313,6 +314,7 @@ const datosMarcadores = {
     	{ nombre: "Strix", descripcion: "Herramienta de pruebas de penetración con IA de código abierto para encontrar y corregir las vulnerabilidades de tu aplicación.", url: "https://github.com/usestrix/strix/" },
     	{ nombre: "OpenWiki", descripcion: "OpenWiki es una interfaz de línea de comandos que escribe y mantiene la documentación de los agentes para su código fuente.", url: "https://github.com/langchain-ai/openwiki/" },
     	{ nombre: "Meetily", descripcion: "Priorizamos la privacidad. Asistente de reuniones con IA que ofrece transcripción en vivo (4 veces más rápida) con Parakeet/Whisper, registro de oradores y resumen con Ollama, todo ello basado en Rust. Procesamiento 100% local. No requiere la nube.", url: "https://github.com/Zackriya-Solutions/meetily/" },
+    	{ nombre: "Gitfut", descripcion: "Tus estadísticas de GitHub, convertidas en una tarjeta de jugador al estilo de la Copa del Mundo.", url: "https://github.com/younesfdj/gitfut/" },
     ]
 };
 
