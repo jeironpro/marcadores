@@ -59,6 +59,7 @@ const datosMarcadores = {
         { nombre: "Web Ruleta", descripcion: "Ruleta interactiva en una sola pagina. Configura numeros o nombres personalizados desde el panel lateral y haz girar la ruleta.", url: "https://jeironpro.github.io/web-ruleta/" },
         { nombre: "Exerciness", descripcion: "Catálogo de ejercicios de gimnasio con búsqueda, filtros, detalle, favoritos y comparador. Frontend SPA en React + Vite, sin backend.", url: "https://exerciness.pages.dev/" },
         { nombre: "Codelang Quiz", descripcion: "Aplicación web de preguntas y respuestas sobre programación. Plantea problemáticas de código con opciones A/B/C/D categorizadas por lenguaje, dificultad y tipo.", url: "https://codelang-quiz.pages.dev/" },
+        { nombre: "Web Mandala", descripcion: "Web en HTML, CSS y JavaScript puro (sin dependencias de runtime) para colorear mandalas en línea, guardarlos en PNG o SVG e imprimirlos.", url: "https://web-mandala.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
