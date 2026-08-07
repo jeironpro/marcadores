@@ -64,13 +64,14 @@ body {
     grid-template-columns: 300px 1fr;
     flex: 1;
     height: 100%;
+    overflow: hidden;
 }
 
 .contenido-derecho {
     display: flex;
     flex-direction: column;
-    overflow: auto;
     background-color: var(--color-fondo);
+    overflow: auto;
 }
 
 /* Panel Lateral */

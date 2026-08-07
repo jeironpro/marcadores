@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Adivina el número">
+  <circle cx="32" cy="32" r="30" fill="#f1de3f" />
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#c9b32e" stroke-width="3" />
+  <text
+    x="32"
+    y="43"
+    font-family="ui-rounded, system-ui, sans-serif"
+    font-size="34"
+    font-weight="700"
+    text-anchor="middle"
+    fill="#26282e"
+  >?</text>
+</svg>
