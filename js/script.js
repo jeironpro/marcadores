@@ -61,6 +61,8 @@ const datosMarcadores = {
         { nombre: "Codelang Quiz", descripcion: "Aplicación web de preguntas y respuestas sobre programación. Plantea problemáticas de código con opciones A/B/C/D categorizadas por lenguaje, dificultad y tipo.", url: "https://codelang-quiz.pages.dev/" },
         { nombre: "Web Mandala", descripcion: "Web en HTML, CSS y JavaScript puro (sin dependencias de runtime) para colorear mandalas en línea, guardarlos en PNG o SVG e imprimirlos.", url: "https://web-mandala.pages.dev/" },
         { nombre: "Juego Adivina el Numero", descripcion: "Pequeño juego web donde debes adivinar el número secreto que elige el navegador entre 1 y 100, usando la menor cantidad de intentos posibles.", url: "https://jeironpro.github.io/juego-adivina-numero/" },
+        { nombre: "Web Contador Palabras", descripcion: "Aplicación web que cuenta palabras, caracteres y caracteres sin espacios en el texto que escribes, pegas o subes desde un archivo. Las métricas se actualizan al instante mientras escribes.", url: "https://jeironpro.github.io/web-contador-palabras/" },
+        { nombre: "Web Votacion", descripcion: "La Papeleta es una aplicación web de votación por partidos, pensada como pieza de portafolio. Cualquier persona vota por un partido —entre los inscritos— y el partido con más votos gana. El escrutinio es único, vivo y en abierto.", url: "https://jeironpro.github.io/web-votacion/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
