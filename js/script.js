@@ -63,6 +63,7 @@ const datosMarcadores = {
         { nombre: "Juego Adivina el Numero", descripcion: "Pequeño juego web donde debes adivinar el número secreto que elige el navegador entre 1 y 100, usando la menor cantidad de intentos posibles.", url: "https://jeironpro.github.io/juego-adivina-numero/" },
         { nombre: "Web Contador Palabras", descripcion: "Aplicación web que cuenta palabras, caracteres y caracteres sin espacios en el texto que escribes, pegas o subes desde un archivo. Las métricas se actualizan al instante mientras escribes.", url: "https://jeironpro.github.io/web-contador-palabras/" },
         { nombre: "Web Votacion", descripcion: "La Papeleta es una aplicación web de votación por partidos, pensada como pieza de portafolio. Cualquier persona vota por un partido —entre los inscritos— y el partido con más votos gana. El escrutinio es único, vivo y en abierto.", url: "https://jeironpro.github.io/web-votacion/" },
+        { nombre: "Web Clima", descripcion: "Aplicación web (SPA) que muestra el estado del tiempo y datos de una localización concreta: temperatura y sensación, viento, humedad, radiación UV, pronóstico a 7 días e información del lugar (coordenadas, elevación, zona horaria, hora local y población).", url: "https://web-clima.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
@@ -320,6 +321,7 @@ const datosMarcadores = {
     	{ nombre: "OpenWiki", descripcion: "OpenWiki es una interfaz de línea de comandos que escribe y mantiene la documentación de los agentes para su código fuente.", url: "https://github.com/langchain-ai/openwiki/" },
     	{ nombre: "Meetily", descripcion: "Priorizamos la privacidad. Asistente de reuniones con IA que ofrece transcripción en vivo (4 veces más rápida) con Parakeet/Whisper, registro de oradores y resumen con Ollama, todo ello basado en Rust. Procesamiento 100% local. No requiere la nube.", url: "https://github.com/Zackriya-Solutions/meetily/" },
     	{ nombre: "Gitfut", descripcion: "Tus estadísticas de GitHub, convertidas en una tarjeta de jugador al estilo de la Copa del Mundo.", url: "https://github.com/younesfdj/gitfut/" },
+    	{ nombre: "React Bits", description: "Una colección de código abierto de componentes React animados, interactivos y totalmente personalizables para crear sitios web memorables.", url: "https://github.com/DavidHDev/react-bits/" },
     ]
 };
 
