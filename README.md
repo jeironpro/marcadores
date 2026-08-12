@@ -14,7 +14,7 @@
 
 ```
 +------------------------------------------+
-|  12 categorias organizadas               |
+|  13 categorias organizadas               |
 |  Busqueda en tiempo real por seccion     |
 |  Tema claro y oscuro                     |
 |  Diseno responsive para movil            |
