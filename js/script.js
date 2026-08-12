@@ -66,6 +66,7 @@ const datosMarcadores = {
         { nombre: "Web Clima", descripcion: "Aplicación web (SPA) que muestra el estado del tiempo y datos de una localización concreta: temperatura y sensación, viento, humedad, radiación UV, pronóstico a 7 días e información del lugar (coordenadas, elevación, zona horaria, hora local y población).", url: "https://web-clima.pages.dev/" },
         { nombre: "Web Biblia", descripcion: "Biblia web con los 73 libros de la edición católica (Antiguo y Nuevo Testamento, incluidos los deuterocanónicos). Sitio estático sin servidor: los versículos se cargan desde un dataset local y las páginas se generan a partir de un catálogo único de libros.", url: "https://jeironpro.github.io/web-biblia/" },
         { nombre: "Web Codingbat Solutions", descripcion: "Contiene mis soluciones a ejercicios de CodingBat en Java y Python, y una web estática (HTML, CSS y JavaScript, sin dependencias) que las muestra con su enunciado, ejemplos y código.", url: "https://jeironpro.github.io/web-codingbat-solutions/" },
+        { nombre: "Web Pythoncises", descripcion: "Sitio web con ejercicios de Python para estudiantes de programacion y entusiastas del lenguaje. Cada ejercicio tiene su propia pagina: se puede ver el codigo, copiarlo al portapapeles y descargar el archivo .py original. Los programas interactivos incluyen ademas una salida de ejemplo capturada ejecutandolos de verdad.", url: "https://jeironpro.github.io/web-pythoncises/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
@@ -324,6 +325,7 @@ const datosMarcadores = {
     	{ nombre: "Meetily", descripcion: "Priorizamos la privacidad. Asistente de reuniones con IA que ofrece transcripción en vivo (4 veces más rápida) con Parakeet/Whisper, registro de oradores y resumen con Ollama, todo ello basado en Rust. Procesamiento 100% local. No requiere la nube.", url: "https://github.com/Zackriya-Solutions/meetily/" },
     	{ nombre: "Gitfut", descripcion: "Tus estadísticas de GitHub, convertidas en una tarjeta de jugador al estilo de la Copa del Mundo.", url: "https://github.com/younesfdj/gitfut/" },
     	{ nombre: "React Bits", description: "Una colección de código abierto de componentes React animados, interactivos y totalmente personalizables para crear sitios web memorables.", url: "https://github.com/DavidHDev/react-bits/" },
+    	{ nombre: "Watermarks remover", descripcion: "Eliminar marcas de procedencia de IA de múltiples proveedores: higiene de texto Unicode, ganchos de reescritura estadística y C2PA/metadatos de PNG/JPEG/SVG/PDF/DOCX/HTML/MD.", url: "https://github.com/guillaumemeyer/watermarks-remover/" },
     ]
 };
 
