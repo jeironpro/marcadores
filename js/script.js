@@ -65,6 +65,7 @@ const datosMarcadores = {
         { nombre: "Web Votacion", descripcion: "La Papeleta es una aplicación web de votación por partidos, pensada como pieza de portafolio. Cualquier persona vota por un partido —entre los inscritos— y el partido con más votos gana. El escrutinio es único, vivo y en abierto.", url: "https://jeironpro.github.io/web-votacion/" },
         { nombre: "Web Clima", descripcion: "Aplicación web (SPA) que muestra el estado del tiempo y datos de una localización concreta: temperatura y sensación, viento, humedad, radiación UV, pronóstico a 7 días e información del lugar (coordenadas, elevación, zona horaria, hora local y población).", url: "https://web-clima.pages.dev/" },
         { nombre: "Web Biblia", descripcion: "Biblia web con los 73 libros de la edición católica (Antiguo y Nuevo Testamento, incluidos los deuterocanónicos). Sitio estático sin servidor: los versículos se cargan desde un dataset local y las páginas se generan a partir de un catálogo único de libros.", url: "https://jeironpro.github.io/web-biblia/" },
+        { nombre: "Web Codingbat Solutions", descripcion: "Contiene mis soluciones a ejercicios de CodingBat en Java y Python, y una web estática (HTML, CSS y JavaScript, sin dependencias) que las muestra con su enunciado, ejemplos y código.", url: "https://jeironpro.github.io/web-codingbat-solutions/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
