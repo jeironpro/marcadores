@@ -69,6 +69,7 @@ const datosMarcadores = {
         { nombre: "Web Pythoncises", descripcion: "Sitio web con ejercicios de Python para estudiantes de programacion y entusiastas del lenguaje. Cada ejercicio tiene su propia pagina: se puede ver el codigo, copiarlo al portapapeles y descargar el archivo .py original. Los programas interactivos incluyen ademas una salida de ejemplo capturada ejecutandolos de verdad.", url: "https://jeironpro.github.io/web-pythoncises/" },
         { nombre: "APIS", descripcion: "Portal web construido solo con HTML, CSS y JS puro (sin frameworks ni backend) que presenta el catálogo de las APIs y permite descargar cada API como .zip — o todas a la vez — directamente desde el navegador.", url: "https://jeironpro.github.io/apis/" },
         { nombre: "Frontend", descripcion: "Web de catálogo de componentes y prototipos de interfaz de usuario creados con HTML, CSS y JavaScript, sin frameworks ni librerías externas.", url: "https://jeironpro.github.io/frontend/" },
+        { nombre: "Web Reloj", descripcion: "Reloj web con un reloj analógico clásico animado en 3D, un temporizador y un cronómetro, construido con Vite + TypeScript y Three.js.", url: "https://web-reloj.pages.dev/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
