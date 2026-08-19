@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo: papel crema -->
+  <rect width="64" height="64" rx="16" fill="#fcf7e6"/>
+  <!-- Botón push de Hum: borde de pera profundo + cara de pera -->
+  <rect x="8" y="11" width="48" height="46" rx="15" fill="#c9b23b"/>
+  <rect x="8" y="6" width="48" height="43" rx="15" fill="#e8d34b"/>
+  <!-- Cilindro de base de datos (SQL) en tinta -->
+  <path d="M21 28v11a11 4.5 0 0 0 22 0v-11z" fill="#2b2a33"/>
+  <ellipse cx="32" cy="28" rx="11" ry="4.5" fill="#2b2a33"/>
+  <!-- Boca del cilindro en el color de la cara -->
+  <ellipse cx="32" cy="28" rx="6" ry="2.4" fill="#e8d34b"/>
+</svg>
