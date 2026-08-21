@@ -77,6 +77,7 @@ const datosMarcadores = {
         { nombre: "Dashboard Financiero", descripcion: "Frontend de dashboard financiero para portafolio personal: ingresos, facturación, suscripciones, estado de pagos y reportes fiscales/contables.", url: "https://dashboard-financiero-olu.pages.dev/" },
         { nombre: "Dashboard Operativo Analitico", descripcion: "Dashboard operativo analítico (frontend) para monitorear KPIs de negocio, analizar tendencias y exportar reportes. Pensado para el equipo comercial de una pyme e-commerce: todo el negocio de un vistazo, con datos de demostración realistas y diseño 100 % responsive.", url: "https://dashboard-operativo-analitico.pages.dev/" },
         { nombre: "Dashboard Soporte", descripcion: "Panel de gestión de soporte técnico para e-commerce. Proyecto de portafolio que demuestra buenas prácticas de desarrollo frontend con React moderno.", url: "https://dashboard-soporte.pages.dev/" },
+        { nombre: "Web Daw", descripcion: "Portal que contiene las 7 webs estáticas del ciclo de Desarrollo de Aplicaciones Web (DAW), organizadas por curso académico (daw1 y daw2).", url: "https://jeironpro.github.io/web-daw/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
