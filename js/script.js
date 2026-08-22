@@ -13,6 +13,7 @@ const datosMarcadores = {
     ],
     "Mis páginas web": [
         { nombre: "Portafolio", descripcion: "Mi portafolio personal de desarrollador.", url: "https://portafolio-jeironpro.pages.dev/" },
+        { nombre: "Pulsar", descripcion: "Formato de datos estructurados, legible por humanos, jerárquico y extensible, diseñado desde cero (no derivado de JSON/YAML/TOML).", url: "https://jeironpro.github.io/pulsar/" },
         { nombre: "Link In Bio", descripcion: "Mi fichero de contacto.", url: "https://jeironpro.github.io/link-in-bio/" },
         { nombre: "Juego 7 Letras", descripcion: "Juego 7 Letras.", url: "https://jeironpro.github.io/juego-7-letras" },
         { nombre: "Juego Memoriza Carta", descripcion: "Memoriza Carta.", url: "https://jeironpro.github.io/juego-memoriza-carta" },
@@ -165,6 +166,8 @@ const datosMarcadores = {
         { nombre: "Free for developers", descripcion: "Fórmulas ahorrativas y tier generosos gratuitos a la hora usar hardware web o despliegues.", url: "https://free-for.dev/" },
     ],
     "Recursos": [
+    	{ nombre: "PyPi", descripcion: "Encuentre, instale y publique paquetes de Python con el Índice de paquetes de Python", url: "https://pypi.org/" },
+    	{ nombre: "Test PyPi", descripcion: "Ponga a prueba la publicación de paquetes de Python con el entorno de pruebas del Índice de paquetes de Python", url: "https://test.pypi.org/" },
         { nombre: "Flaticon", descripcion: "Extensa recolección mundial de íconos web y variados por formato SVG, PNG, EPS.", url: "https://www.flaticon.com/" },
         { nombre: "Yesicon", descripcion: "Colección curada asombrosa orientada íntegramente de SVGs y tipografía iconográfica minimalista.", url: "https://yesicon.app/" },
         { nombre: "Visualising data structures", descripcion: "Academia interactiva y colorida con animaciones que ilustran listas, árboles web o grafos.", url: "https://visualgo.net/en" },
