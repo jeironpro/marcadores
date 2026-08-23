@@ -12,6 +12,7 @@ const datosMarcadores = {
         { nombre: "phpMyAdmin", descripcion: "Administración visual y rápida para bases de datos MySQL y MariaDB.", url: "http://localhost/phpMyAdmin/index.php?route=/" },
     ],
     "Mis páginas web": [
+    	{ nombre: "Web Calificaciones Escolares", descripcion: "Web estática que presenta un expediente escolar (pre-primaria, primaria y secundaria) a partir de los datos de qualifications.json.", url: "https://jeironpro.github.io/web-calificaciones-escolares/" },
         { nombre: "Portafolio", descripcion: "Mi portafolio personal de desarrollador.", url: "https://portafolio-jeironpro.pages.dev/" },
         { nombre: "Pulsar", descripcion: "Formato de datos estructurados, legible por humanos, jerárquico y extensible, diseñado desde cero (no derivado de JSON/YAML/TOML).", url: "https://jeironpro.github.io/pulsar/" },
         { nombre: "Link In Bio", descripcion: "Mi fichero de contacto.", url: "https://jeironpro.github.io/link-in-bio/" },
