@@ -342,6 +342,14 @@ const datosMarcadores = {
     	{ nombre: "Gitfut", descripcion: "Tus estadísticas de GitHub, convertidas en una tarjeta de jugador al estilo de la Copa del Mundo.", url: "https://github.com/younesfdj/gitfut/" },
     	{ nombre: "React Bits", description: "Una colección de código abierto de componentes React animados, interactivos y totalmente personalizables para crear sitios web memorables.", url: "https://github.com/DavidHDev/react-bits/" },
     	{ nombre: "Watermarks remover", descripcion: "Eliminar marcas de procedencia de IA de múltiples proveedores: higiene de texto Unicode, ganchos de reescritura estadística y C2PA/metadatos de PNG/JPEG/SVG/PDF/DOCX/HTML/MD.", url: "https://github.com/guillaumemeyer/watermarks-remover/" },
+    	{ nombre: "Argos Translate", descripcion: "Biblioteca de traducción sin conexión de código abierto escrita en Python.", url: "https://github.com/argosopentech/argos-translate/" },
+    	{ nombre: "fx", descripcion: "Agente de codificación tipo Unix.", url: "https://github.com/vercel-labs/fx/" },
+    	{ nombre: "Better Web UI", descripcion: "better-web-ui es una biblioteca de habilidades de diseño de interfaz web para agentes de codificación de IA.", url: "https://github.com/aladicf/better-web-ui/" },
+    	{ nombre: "Superdesign skill", descripcion: "Habilidad de diseño para Claude Code, Cursor y cualquier agente de codificación.", url: "https://github.com/superdesigndev/superdesign-skill/" },
+    	{ nombre: "Taste skill", descripcion: "Habilidad de buen gusto: le da a tu IA buen gusto. Evita que la IA genere basura genérica y aburrida.", url: "https://github.com/Leonxlnx/taste-skill/" },
+    	{ nombre: "Avoid AI Design", descripcion: "Una habilidad de Claude Code que audita el frontend generado por IA y lo reescribe para eliminar patrones de diseño genéricos y deficientes propios de la IA (gradientes morados, Inter, sombreado predeterminado).", url: "https://github.com/funboy322/avoid-ai-design/" },
+    	{ nombre: "Claude code", descripcion: "Claude Code es una herramienta de codificación interactiva que reside en tu terminal, comprende tu código fuente y te ayuda a programar más rápido.", url: "https://github.com/anthropics/claude-code/" },
+    	{ nombre: "ckw design skill", descripcion: "Habilidades de diseño frontend de Conner K. Ward para Claude Code: dirección, sistema de diseño, filosofía visual.", url: "https://github.com/connerkward/ckw-design-skill/" },
     ]
 };
 
