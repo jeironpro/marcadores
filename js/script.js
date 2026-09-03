@@ -81,6 +81,7 @@ const datosMarcadores = {
         { nombre: "Dashboard Soporte", descripcion: "Panel de gestión de soporte técnico para e-commerce. Proyecto de portafolio que demuestra buenas prácticas de desarrollo frontend con React moderno.", url: "https://dashboard-soporte.pages.dev/" },
         { nombre: "Web Daw", descripcion: "Portal que contiene las 7 webs estáticas del ciclo de Desarrollo de Aplicaciones Web (DAW), organizadas por curso académico (daw1 y daw2).", url: "https://jeironpro.github.io/web-daw/" },
         { nombre: "Web Javarcises", descripcion: "Web estática (HTML + CSS + JS vanilla, sin frameworks) que muestra los ejercicios de programación en Java del proyecto: 81 ejercicios de triviales/ (de Básico I a Experto I) y 30 problemas de diseño POO de problemas-diseno/ (de Modelado simple a Sistemas completos).", url: "https://jeironpro.github.io/web-javarcises/" },
+        { nombre: "Web Continguts DAW", descripcion: "Visor web estático para los materiales docentes del CFGS de Desarrollo de Aplicaciones Web (1r y 2n curs). La interfaz se inspira en el estilo visual de depobudget (neobrutalismo): fondo crema, tinta casi negra, bordes marcados y sombras duras.", url: "https://jeironpro.github.io/web-continguts-daw/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
