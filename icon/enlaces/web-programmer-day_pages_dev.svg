@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Fondo negro terminal -->
+  <rect width="64" height="64" rx="12" fill="#05090f"/>
+  <!-- Glifos binarios "1 0" en verde fósforo -->
+  <text x="14" y="30" font-family="monospace" font-size="24" font-weight="700" fill="#55ff88">1</text>
+  <text x="32" y="52" font-family="monospace" font-size="24" font-weight="700" fill="#2fd979">0</text>
+</svg>
