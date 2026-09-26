@@ -346,6 +346,110 @@ const datosMarcadores = {
 const CLAVE_TEMA = "marcadores-tema";
 const CONSULTA_MOVIL = "(max-width: 1024px)";
 
+/* Ajuste de visibilidad de los favicons.
+   Un unico fondo no sirve: hay logos negros (GitHub, Vercel, Rust) que se
+   pierden sobre el fondo oscuro, y logos claros (icones.js, ChatGPT) que se
+   pierden sobre el blanco. Midiendo la luminancia de cada archivo de
+   icon/enlaces se separan los que necesitan ayuda:
+
+   ICONOS_PLACA  -> su tono dominante no contrasta con la superficie oscura, asi
+                    que en el tema oscuro la caja del icono recibe una placa
+                    clara. No se altera el color de la marca.
+   ICONOS_CLAROS -> logo claro sobre fondo transparente: en el tema claro se
+                    invierte para que se vea sobre el blanco.
+   Los demas (imagenes con fondo propio, logos con glifos blancos como Facebook
+   o LinkedIn, y los de tono medio) ya se ven bien en los dos temas.
+
+   Al descargar iconos nuevos hay que medir su luminancia y anadir el archivo
+   al grupo que corresponda. */
+const ICONOS_PLACA = new Set([
+    "123d_one.png",
+    "agentskills_io.png",
+    "animejs_com.png",
+    "app_crewai_com.png",
+    "codebase_memory_mcp.svg",
+    "comprehensive_rust.svg",
+    "developer_spotify_com.ico",
+    "docs_anthropic_com.png",
+    "docs_djangoproject_com.png",
+    "docs_expo_dev.png",
+    "drawsql_app.ico",
+    "ecc_tools.png",
+    "engineering_atspotify_com.ico",
+    "exerciness_pages_dev.svg",
+    "freeicons_org.png",
+    "gamma_app.jpg",
+    "github_com.svg",
+    "godly_website.png",
+    "insforge_dev.ico",
+    "ipquery_io.svg",
+    "itsfree_ai.png",
+    "juego-trivia_pages_dev.svg",
+    "juegos.svg",
+    "librosgratis_dev.svg",
+    "marcadores.png",
+    "namethatui_com.png",
+    "neon_com.png",
+    "odysseusai_dev.png",
+    "onyx_app.ico",
+    "opencode_ai.png",
+    "openrouter_ai.png",
+    "planetscale_com.png",
+    "portafolio-jeironpro_pages_dev.svg",
+    "publicapis_dev.png",
+    "publicapis_io.png",
+    "pulsar.svg",
+    "qwen_ai.png",
+    "railway_com.png",
+    "reactnative_dev.png",
+    "recent_design.svg",
+    "render_com.svg",
+    "runsql_com.ico",
+    "sentry_io.ico",
+    "sileo_aaryan_design.svg",
+    "skillbuilder_aws.svg",
+    "skiper-ui_com.ico",
+    "supabase_com.png",
+    "theme-toggle_rdsx_dev.svg",
+    "ui_lukacho_com.ico",
+    "upstash_com.png",
+    "vercel_com.png",
+    "visualgo_net.png",
+    "voltagent_dev.ico",
+    "webs.svg",
+    "www_alg0_dev.svg",
+    "www_autoskills_sh.png",
+    "www_awwwards_com.png",
+    "www_codebuff_com.png",
+    "www_cssdesignawards_com.png",
+    "www_django-rest-framework_org.ico",
+    "www_drawdb_app.ico",
+    "www_halloween_dev.png",
+    "www_morphicons_com.png",
+    "www_projectwallace_com.png",
+    "www_skills_sh.ico",
+    "www_threads_com.ico",
+    "www_tiktok_com.ico",
+]);
+
+const ICONOS_CLAROS = new Set([
+    "chatgpt_com.png",
+    "codelang-quiz_pages_dev.svg",
+    "console_firebase_google_com.png",
+    "developers_google_com.png",
+    "floci_io.png",
+    "frontend.png",
+    "icones_js_org.svg",
+    "mail_google_com.png",
+    "notebooklm_google_com.png",
+    "pypi_org.ico",
+    "resend_com.png",
+    "test_pypi_org.ico",
+    "web-check_xyz.png",
+    "www_shapedivider_app.ico",
+    "www_transition_style.png",
+]);
+
 let categoriaActual = null;
 let tarjetasCategoria = [];
 
@@ -593,7 +697,16 @@ function crearIcono(datos) {
     });
 
     /* El monograma se oculta en cuanto hay un icono real */
-    icono.addEventListener("load", () => marca.classList.add("con-icono"));
+    icono.addEventListener("load", () => {
+        marca.classList.add("con-icono");
+        const archivo = icono.currentSrc.split("/").pop();
+        if (ICONOS_PLACA.has(archivo)) {
+            marca.classList.add("icono-placa");
+        }
+        if (ICONOS_CLAROS.has(archivo)) {
+            marca.classList.add("icono-claro");
+        }
+    });
 
     let indice = 0;
     const probarSiguiente = () => {

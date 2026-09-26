@@ -114,6 +114,14 @@ Todos los colores, radios, sombras, tiempos de transicion y medidas estan defini
 ### Tarjetas
 Cada tarjeta es una superficie clicable completa mediante un enlace que la cubre por encima (`aria-labelledby` apunta al titulo), de modo que hay un unico blanco y un unico elemento enfocable por enlace. El icono se resuelve probando las extensiones disponibles en `icon/enlaces/` y, si ninguna existe, queda el monograma con la inicial.
 
+### Visibilidad de los iconos
+Un fondo unico no basta: hay logos negros (GitHub, Vercel, Rust) que se pierden sobre la superficie oscura, y logos claros (icones.js, ChatGPT) que se pierden sobre el blanco. Por eso `js/script.js` mantiene dos conjuntos medidos sobre la luminancia real de cada archivo:
+
+- `ICONOS_PLACA`: en el tema oscuro la caja del icono recibe una placa clara (`#eef0f4`). El color de la marca no se altera.
+- `ICONOS_CLAROS`: en el tema claro se invierten (`invert` + `hue-rotate`) para verse sobre el blanco.
+
+Los que traen su propio fondo o tienen glifos blancos (Facebook, LinkedIn, TikTok) no se tocan: se verian mal con cualquiera de las dos correcciones. La medicion se hizo con `canvas` sobre un servidor local, porque con `file://` el lienzo queda contaminado y no se puede leer. Al anadir iconos nuevos hay que medirlos y anotarlos en el conjunto que corresponda.
+
 ### Accesibilidad
 - Contraste minimo AA (4.5:1) verificado en ambos temas
 - Anillo de foco visible en todos los controles interactivos

@@ -719,6 +719,25 @@ a {
     object-fit: contain;
 }
 
+/* En tema oscuro los favicons de tono oscuro (GitHub, Vercel, Rust...)
+   desaparecerían sobre una superficie casi negra, así que su caja recibe una
+   placa clara que los hace legibles sin alterar los colores de la marca.
+   Solo se aplica a los iconos que lo necesitan: los que traen su propio fondo
+   o tienen glifos blancos (Facebook, LinkedIn, TikTok) se verían mal. */
+[data-tema="oscuro"] .marca-icono.icono-placa {
+    background-color: #eef0f4;
+    box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.08);
+}
+
+/* En tema claro los iconos claros se invierten para verse sobre el blanco */
+.marca-icono.icono-claro .icono-tarjeta {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+[data-tema="oscuro"] .marca-icono.icono-claro .icono-tarjeta {
+    filter: none;
+}
+
 .titulo-enlace {
     font-size: 1rem;
     font-weight: 600;
