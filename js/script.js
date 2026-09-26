@@ -333,38 +333,52 @@ const datosMarcadores = {
     ]
 };
 
-let categoriaActual = null;
+/* ============================================================
+   LÓGICA DE LA APLICACIÓN
+   1. Estado y utilidades      5. Tarjetas
+   2. Tema                     6. Búsqueda y estado vacío
+   3. Navegación               7. Menú móvil
+   4. Categorías               8. Atajos de teclado
+   ============================================================ */
 
-const agregarTextoAElemento = (elemento, texto) => {
-    elemento.appendChild(document.createTextNode(texto));
-};
+/* 1. ESTADO Y UTILIDADES =================================== */
+
+const CLAVE_TEMA = "marcadores-tema";
+const CONSULTA_MOVIL = "(max-width: 1024px)";
+
+let categoriaActual = null;
+let tarjetasCategoria = [];
+
+const normalizar = (texto) =>
+    texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+function totalEnlaces() {
+    return Object.values(datosMarcadores).reduce((suma, lista) => suma + lista.length, 0);
+}
+
+function obtenerHost(url) {
+    try {
+        return new URL(url).hostname || "";
+    } catch (error) {
+        return "";
+    }
+}
+
+/* Nombre legible del enlace: sin www ni barra final */
+function obtenerDominio(url) {
+    return obtenerHost(url).replace(/^www\./i, "");
+}
 
 function inicializarAplicacion() {
-    configurarCambioTema();
+    configurarTema();
     configurarMenuMovil();
     renderizarCategorias();
-    configurarBusquedaSeccion();
+    configurarBusqueda();
+    configurarAtajosTeclado();
 
-    const categoriasBase = Object.keys(datosMarcadores);
-    if (categoriasBase.length > 0) {
-        mostrarEnlacesPorCategoria(categoriasBase[0]);
-    }
-}
-
-function cambiarTema() {
-    const elementoRaiz = document.documentElement;
-    const temaActual = elementoRaiz.getAttribute("data-tema");
-    if (temaActual === "oscuro") {
-        elementoRaiz.removeAttribute("data-tema");
-    } else {
-        elementoRaiz.setAttribute("data-tema", "oscuro");
-    }
-}
-
-function configurarCambioTema() {
-    const botonTema = document.getElementById("botonCambiarTema");
-    if (botonTema) {
-        botonTema.addEventListener("click", cambiarTema);
+    const categorias = Object.keys(datosMarcadores);
+    if (categorias.length > 0) {
+        mostrarCategoria(categorias[0]);
     }
 }
 
@@ -375,241 +389,513 @@ function limpiarContenedor(contenedor) {
     }
 }
 
+/* 2. TEMA =================================================== */
+
+function aplicarTema(tema) {
+    document.documentElement.setAttribute("data-tema", tema);
+
+    const botonTema = document.getElementById("botonCambiarTema");
+    if (botonTema) {
+        const destino = tema === "oscuro" ? "claro" : "oscuro";
+        botonTema.setAttribute("aria-label", `Cambiar a tema ${destino}`);
+        botonTema.setAttribute("title", `Cambiar a tema ${destino}`);
+    }
+}
+
+function guardarTema(tema) {
+    try {
+        localStorage.setItem(CLAVE_TEMA, tema);
+    } catch (error) {
+        /* Almacenamiento no disponible: el tema solo dura la sesión */
+    }
+}
+
+function alternarTema() {
+    const tema = document.documentElement.getAttribute("data-tema") === "oscuro" ? "claro" : "oscuro";
+    aplicarTema(tema);
+    guardarTema(tema);
+}
+
+function configurarTema() {
+    aplicarTema(document.documentElement.getAttribute("data-tema") || "claro");
+
+    const botonTema = document.getElementById("botonCambiarTema");
+    if (botonTema) {
+        botonTema.addEventListener("click", alternarTema);
+    }
+
+    /* Si la persona nunca eligió tema, se sigue al del sistema */
+    const preferenciaSistema = window.matchMedia("(prefers-color-scheme: dark)");
+    preferenciaSistema.addEventListener("change", (evento) => {
+        let elegido = null;
+        try {
+            elegido = localStorage.getItem(CLAVE_TEMA);
+        } catch (error) {
+            elegido = null;
+        }
+        if (!elegido) {
+            aplicarTema(evento.matches ? "oscuro" : "claro");
+        }
+    });
+}
+
+/* 3. NAVEGACIÓN ============================================= */
+
+function mostrarCategoria(categoria) {
+    const area = document.getElementById("areaEnlaces");
+    const estadoVacio = document.getElementById("estadoVacio");
+    if (!area || !estadoVacio) return;
+
+    categoriaActual = categoria;
+    sincronizarCategoriaActiva(categoria);
+    limpiarContenedor(area);
+    area.appendChild(estadoVacio);
+
+    const enlaces = datosMarcadores[categoria] || [];
+    tarjetasCategoria = enlaces.map((enlace, indice) => {
+        const tarjeta = crearTarjetaEnlace(enlace, indice);
+        area.appendChild(tarjeta);
+        return {
+            elemento: tarjeta,
+            texto: normalizar(`${enlace.nombre} ${enlace.descripcion}`)
+        };
+    });
+
+    const tituloSeccion = document.getElementById("tituloSeccion");
+    if (tituloSeccion) tituloSeccion.textContent = categoria;
+
+    const tituloMovil = document.getElementById("tituloMovil");
+    if (tituloMovil) tituloMovil.textContent = categoria;
+
+    area.scrollTop = 0;
+    aplicarFiltro(obtenerTerminoBusqueda());
+}
+
+/* Única fuente de verdad: qué categoría está seleccionada */
+function sincronizarCategoriaActiva(nombre) {
+    const botones = document.querySelectorAll(".boton-categoria");
+    for (const boton of botones) {
+        const activo = boton.getAttribute("data-nombre") === nombre;
+        boton.classList.toggle("activo", activo);
+        boton.setAttribute("aria-current", activo ? "true" : "false");
+    }
+}
+
 function manejarClicCategoria(evento) {
-    const botonesLateral = document.querySelectorAll(".boton-categoria");
-    for (const boton of botonesLateral) {
-        boton.classList.remove("activo");
+    mostrarCategoria(evento.currentTarget.getAttribute("data-nombre"));
+    limpiarBusqueda();
+    cerrarMenuMovil();
+}
+
+/* 4. CATEGORÍAS ============================================ */
+
+function renderizarCategorias() {
+    const lista = document.getElementById("listaCategorias");
+    const pie = document.getElementById("piePanel");
+    if (!lista) return;
+
+    const categorias = Object.keys(datosMarcadores);
+    const fragmento = document.createDocumentFragment();
+
+    categorias.forEach((nombre) => {
+        const boton = document.createElement("button");
+        boton.type = "button";
+        boton.className = "boton-categoria";
+        boton.setAttribute("data-nombre", nombre);
+        boton.setAttribute("aria-current", "false");
+
+        const texto = document.createElement("span");
+        texto.className = "nombre-categoria";
+        texto.textContent = nombre;
+
+        const contador = document.createElement("span");
+        contador.className = "contador-categoria";
+        contador.textContent = datosMarcadores[nombre].length;
+
+        boton.appendChild(texto);
+        boton.appendChild(contador);
+        boton.addEventListener("click", manejarClicCategoria);
+        fragmento.appendChild(boton);
+    });
+
+    limpiarContenedor(lista);
+    lista.appendChild(fragmento);
+
+    if (pie) {
+        limpiarContenedor(pie);
+
+        const atajo = document.createElement("kbd");
+        atajo.textContent = "/";
+
+        const pista = document.createElement("span");
+        pista.appendChild(atajo);
+        pista.appendChild(document.createTextNode(" para buscar"));
+
+        pie.appendChild(pista);
     }
 
-    const botonPresionado = evento.currentTarget;
-    botonPresionado.classList.add("activo");
-
-    const nombreCategoria = botonPresionado.getAttribute("data-nombre");
-    categoriaActual = nombreCategoria;
-    mostrarEnlacesPorCategoria(nombreCategoria);
-
-    const buscadorSeccion = document.getElementById("buscadorSeccion");
-    if (buscadorSeccion) {
-        buscadorSeccion.value = "";
-    }
-
-    const panelLateral = document.getElementById("panelCategorias");
-    const overlay = document.getElementById("overlayMovil");
-    if (panelLateral && overlay) {
-        panelLateral.classList.remove("abierto");
-        overlay.classList.remove("activo");
+    const subtitulo = document.getElementById("subtituloPanel");
+    if (subtitulo) {
+        subtitulo.textContent = `${categorias.length} categorías · ${totalEnlaces()} enlaces`;
     }
 }
 
-function configurarMenuMovil() {
-    const botonMenu = document.getElementById("botonMenuMovil");
-    const overlay = document.getElementById("overlayMovil");
-    const panelLateral = document.getElementById("panelCategorias");
-
-    if (botonMenu && overlay && panelLateral) {
-        botonMenu.addEventListener("click", function () {
-            panelLateral.classList.add("abierto");
-            overlay.classList.add("activo");
-        });
-
-        overlay.addEventListener("click", function () {
-            panelLateral.classList.remove("abierto");
-            overlay.classList.remove("activo");
-        });
-    }
-}
+/* 5. TARJETAS =============================================== */
 
 const EXCEPCIONES_DOMINIO = ["github.io"];
 
 function esDominioExcepcion(host) {
-    host = (host || "").toLowerCase().replace(/\/$/, "");
-    return EXCEPCIONES_DOMINIO.some(exc => host === exc || host.endsWith("." + exc));
+    return EXCEPCIONES_DOMINIO.some((excepcion) => host === excepcion || host.endsWith(`.${excepcion}`));
 }
 
+/* Busca el favicon probando el dominio exacto y, después, sus alternativas */
 function obtenerRutaIcono(nombre, url) {
-    const extensiones = ["svg", "jpg", "jpeg", "ico", "gif", "png", "webp"];
-    let dominioLimpio = null;
-    if (url) {
-        let host = "";
-        try {
-            host = new URL(url).hostname || "";
-        } catch (e) {
-            host = "";
-        }
-        if (host && host !== "localhost" && !esDominioExcepcion(host)) {
-            dominioLimpio = host.toLowerCase().replace(/\./g, "_").replace(/:/g, "_");
+    const extensiones = ["png", "svg", "ico", "webp", "jpg", "jpeg", "gif"];
+    const claves = [];
+    const host = obtenerHost(url).toLowerCase();
+
+    if (host && host !== "localhost" && !esDominioExcepcion(host)) {
+        const porDominio = host.replace(/[.:]/g, "_");
+        claves.push(porDominio);
+
+        const sinWww = porDominio.replace(/^www_/, "");
+        if (sinWww !== porDominio) {
+            claves.push(sinWww);
         }
     }
-    const nombreLimpio = nombre.toLowerCase().replace(/ /g, "_");
-    const claves = dominioLimpio ? [dominioLimpio, nombreLimpio] : [nombreLimpio];
+
+    const porNombre = normalizar(nombre).replace(/\s+/g, "_");
+    if (!claves.includes(porNombre)) {
+        claves.push(porNombre);
+    }
+
     return { claves, baseDir: "icon/enlaces", extensiones };
 }
 
-function renderizarCategorias() {
-    const panel = document.querySelector(".panel-lateral-fijo");
-    if (!panel) return;
-
-    limpiarContenedor(panel);
-    const categorias = Object.keys(datosMarcadores);
-
-    categorias.forEach((nombre, indice) => {
-        const boton = document.createElement("button");
-        boton.classList.add("boton-categoria");
-        boton.setAttribute("data-nombre", nombre);
-
-        if (indice === 0) {
-            boton.classList.add("activo");
-            categoriaActual = nombre;
-        }
-
-        const textoNombre = document.createElement("span");
-        textoNombre.textContent = nombre;
-        boton.appendChild(textoNombre);
-
-        const contador = document.createElement("span");
-        contador.classList.add("contador-categoria");
-        contador.textContent = datosMarcadores[nombre].length;
-        boton.appendChild(contador);
-
-        boton.addEventListener("click", manejarClicCategoria);
-        panel.appendChild(boton);
-    });
-
-    const totalEnlaces = Object.values(datosMarcadores).reduce((suma, arr) => suma + arr.length, 0);
-
-    const panelTotal = document.createElement("div");
-    panelTotal.classList.add("total-enlaces");
-
-    const textoTotal = document.createElement("span");
-    textoTotal.textContent = "Total";
-    panelTotal.appendChild(textoTotal);
-
-    const contadorTotal = document.createElement("span");
-    contadorTotal.classList.add("contador-categoria");
-    contadorTotal.textContent = totalEnlaces;
-    panelTotal.appendChild(contadorTotal);
-
-    panel.appendChild(panelTotal);
-}
-
-function crearTarjetaEnlace(datos, conAnimacion = false) {
-    const tarjeta = document.createElement("article");
-    tarjeta.classList.add("tarjeta-enlace");
-    if (conAnimacion) {
-        tarjeta.classList.add("animacion-entrada");
-    }
-
-    const encabezado = document.createElement("div");
-    encabezado.classList.add("encabezado-tarjeta");
+function crearIcono(datos) {
+    const marca = document.createElement("span");
+    marca.className = "marca-icono";
+    marca.setAttribute("aria-hidden", "true");
+    marca.dataset.inicial = (datos.nombre.trim()[0] || "•").toUpperCase();
 
     const icono = document.createElement("img");
-    icono.classList.add("icono-tarjeta");
+    icono.className = "icono-tarjeta";
+    icono.alt = "";
+    icono.loading = "lazy";
+    icono.decoding = "async";
+
     const { claves, baseDir, extensiones } = obtenerRutaIcono(datos.nombre, datos.url);
-    let indicePrueba = 0;
     const combinaciones = [];
     claves.forEach((clave) => {
-        extensiones.forEach((ext) => {
-            combinaciones.push(`${baseDir}/${clave}.${ext}`);
+        extensiones.forEach((extension) => {
+            combinaciones.push(`${baseDir}/${clave}.${extension}`);
         });
     });
 
-    function cargarIcono() {
-        if (indicePrueba >= combinaciones.length) {
-            icono.style.display = "none";
+    /* El monograma se oculta en cuanto hay un icono real */
+    icono.addEventListener("load", () => marca.classList.add("con-icono"));
+
+    let indice = 0;
+    const probarSiguiente = () => {
+        indice += 1;
+        if (indice >= combinaciones.length) {
+            icono.remove();
             return;
         }
-        icono.setAttribute("src", combinaciones[indicePrueba]);
-        indicePrueba++;
+        icono.src = combinaciones[indice];
+    };
+
+    icono.addEventListener("error", probarSiguiente);
+    if (combinaciones.length > 0) {
+        icono.src = combinaciones[0];
+    } else {
+        icono.remove();
     }
-    icono.setAttribute("alt", `Icono de ${datos.nombre}`);
-    icono.addEventListener("error", cargarIcono);
-    cargarIcono();
 
-    const titulo = document.createElement("h2");
-    titulo.classList.add("titulo-enlace");
-    agregarTextoAElemento(titulo, datos.nombre);
+    marca.appendChild(icono);
+    return marca;
+}
 
-    encabezado.appendChild(icono);
+function crearTarjetaEnlace(datos, indice) {
+    const tarjeta = document.createElement("article");
+    tarjeta.className = "tarjeta-enlace animacion-entrada";
+    tarjeta.style.setProperty("--indice", Math.min(indice, 14));
+
+    const encabezado = document.createElement("div");
+    encabezado.className = "encabezado-tarjeta";
+
+    const titulo = document.createElement("h3");
+    titulo.className = "titulo-enlace";
+    titulo.id = `titulo-${indice}-${normalizar(datos.nombre).replace(/[^a-z0-9]+/g, "-")}`;
+    titulo.textContent = datos.nombre;
+
+    encabezado.appendChild(crearIcono(datos));
     encabezado.appendChild(titulo);
 
     const descripcion = document.createElement("p");
-    descripcion.classList.add("descripcion-enlace");
-    agregarTextoAElemento(descripcion, datos.descripcion);
+    descripcion.className = "descripcion-enlace";
+    descripcion.textContent = datos.descripcion;
+    descripcion.title = datos.descripcion;
 
-    const botonAbrir = document.createElement("a");
-    botonAbrir.classList.add("boton-abrir");
-    botonAbrir.setAttribute("href", datos.url);
-    botonAbrir.setAttribute("target", "_blank");
-    botonAbrir.setAttribute("rel", "noopener noreferrer");
-    agregarTextoAElemento(botonAbrir, "Abrir Enlace");
+    const pie = document.createElement("div");
+    pie.className = "pie-tarjeta";
+
+    const dominio = document.createElement("span");
+    dominio.className = "dominio-enlace";
+    dominio.textContent = obtenerDominio(datos.url) || datos.url;
+
+    const flecha = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    flecha.setAttribute("class", "icono-flecha");
+    flecha.setAttribute("viewBox", "0 0 24 24");
+    flecha.setAttribute("fill", "none");
+    flecha.setAttribute("stroke", "currentColor");
+    flecha.setAttribute("stroke-width", "2.2");
+    flecha.setAttribute("stroke-linecap", "round");
+    flecha.setAttribute("stroke-linejoin", "round");
+    flecha.setAttribute("aria-hidden", "true");
+    flecha.innerHTML = '<line x1="7" y1="17" x2="17" y2="7"></line><polyline points="8 7 17 7 17 16"></polyline>';
+
+    pie.appendChild(dominio);
+    pie.appendChild(flecha);
+
+    /* Enlace invisible que cubre toda la tarjeta: un solo blanco y foco por enlace */
+    const acceso = document.createElement("a");
+    acceso.className = "acceso-tarjeta";
+    acceso.href = datos.url;
+    acceso.target = "_blank";
+    acceso.rel = "noopener noreferrer";
+    acceso.setAttribute("aria-labelledby", titulo.id);
+    acceso.title = `Abrir ${datos.nombre} en una pestaña nueva`;
 
     tarjeta.appendChild(encabezado);
     tarjeta.appendChild(descripcion);
-    tarjeta.appendChild(botonAbrir);
+    tarjeta.appendChild(pie);
+    tarjeta.appendChild(acceso);
 
     return tarjeta;
 }
 
-function actualizarEstadoVacio(mostrar) {
-    const estadoVacio = document.getElementById("estadoVacio");
-    const areaEnlaces = document.getElementById("areaEnlaces");
-    if (estadoVacio) {
-        if (mostrar) {
-            estadoVacio.classList.add("activo");
-            areaEnlaces.style.display = "none";
-        } else {
-            estadoVacio.classList.remove("activo");
-            areaEnlaces.style.display = "";
-        }
-    }
+/* 6. BÚSQUEDA Y ESTADO VACÍO =============================== */
+
+function obtenerTerminoBusqueda() {
+    const buscador = document.getElementById("buscadorSeccion");
+    return buscador ? buscador.value : "";
+}
+
+function aplicarFiltro(terminoBusqueda) {
+    const termino = normalizar(terminoBusqueda.trim());
+    let visibles = 0;
+
+    tarjetasCategoria.forEach(({ elemento, texto }) => {
+        const coincide = termino === "" || texto.includes(termino);
+        elemento.hidden = !coincide;
+        if (coincide) visibles += 1;
+    });
+
+    actualizarContadorSeccion(tarjetasCategoria.length, visibles);
+    actualizarEstadoVacio(visibles === 0, termino);
 }
 
 function actualizarContadorSeccion(total, filtrados) {
     const contador = document.getElementById("contadorSeccion");
-    if (contador) {
-        if (total === filtrados) {
-            contador.textContent = `${total} enlace${total !== 1 ? 's' : ''}`;
-        } else {
-            contador.textContent = `${filtrados} de ${total}`;
-        }
+    if (!contador) return;
+
+    if (filtrados === total) {
+        contador.textContent = `${total} enlace${total === 1 ? "" : "s"}`;
+    } else {
+        contador.textContent = `${filtrados} de ${total}`;
     }
 }
 
-function mostrarEnlacesPorCategoria(categoria, terminoBusqueda = "") {
-    const area = document.getElementById("areaEnlaces");
-    if (!area) return;
+function actualizarEstadoVacio(mostrar, termino) {
+    const estadoVacio = document.getElementById("estadoVacio");
+    if (!estadoVacio) return;
 
-    limpiarContenedor(area);
+    estadoVacio.classList.toggle("activo", mostrar);
 
-    const todosLosEnlaces = datosMarcadores[categoria] || [];
-    let enlacesFiltrados = todosLosEnlaces;
+    const hayTermino = termino !== "";
+    const textoVacio = document.getElementById("textoVacio");
+    const detalleVacio = document.getElementById("detalleVacio");
+    const botonVaciar = document.getElementById("botonVaciarBusqueda");
 
-    if (terminoBusqueda.trim() !== "") {
-        const termino = terminoBusqueda.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        enlacesFiltrados = todosLosEnlaces.filter(enlace => {
-            const nombre = enlace.nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            const desc = enlace.descripcion.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            return nombre.includes(termino) || desc.includes(termino);
+    if (textoVacio) {
+        textoVacio.textContent = hayTermino ? "Sin coincidencias" : "Esta categoría está vacía";
+    }
+    if (detalleVacio) {
+        detalleVacio.textContent = hayTermino
+            ? `Ningún enlace coincide con "${termino}". Prueba con otros términos.`
+            : "Todavía no hay enlaces guardados aquí.";
+    }
+    if (botonVaciar) {
+        botonVaciar.hidden = !hayTermino;
+    }
+}
+
+function limpiarBusqueda() {
+    const buscador = document.getElementById("buscadorSeccion");
+    if (buscador && buscador.value !== "") {
+        buscador.value = "";
+        sincronizarControlesBusqueda();
+        aplicarFiltro("");
+    }
+}
+
+function sincronizarControlesBusqueda() {
+    const buscador = document.getElementById("buscadorSeccion");
+    const campo = document.getElementById("campoBusqueda");
+    const botonLimpiar = document.getElementById("botonLimpiarBusqueda");
+    if (!buscador) return;
+
+    const tieneTexto = buscador.value !== "";
+    if (campo) campo.classList.toggle("con-texto", tieneTexto);
+    if (botonLimpiar) botonLimpiar.hidden = !tieneTexto;
+}
+
+function configurarBusqueda() {
+    const buscador = document.getElementById("buscadorSeccion");
+    if (!buscador) return;
+
+    buscador.addEventListener("input", () => {
+        sincronizarControlesBusqueda();
+        aplicarFiltro(buscador.value);
+    });
+
+    const botonLimpiar = document.getElementById("botonLimpiarBusqueda");
+    if (botonLimpiar) {
+        botonLimpiar.addEventListener("click", () => {
+            limpiarBusqueda();
+            buscador.focus();
         });
     }
 
-    actualizarContadorSeccion(todosLosEnlaces.length, enlacesFiltrados.length);
-    actualizarEstadoVacio(enlacesFiltrados.length === 0);
+    const botonVaciar = document.getElementById("botonVaciarBusqueda");
+    if (botonVaciar) {
+        botonVaciar.addEventListener("click", () => {
+            limpiarBusqueda();
+            buscador.focus();
+        });
+    }
+}
 
-    enlacesFiltrados.forEach((enlace, i) => {
-        const tarjeta = crearTarjetaEnlace(enlace, true);
-        tarjeta.style.animationDelay = `${i * 0.04}s`;
-        area.appendChild(tarjeta);
+/* 7. MENÚ MÓVIL ============================================ */
+
+function menuMovilAbierto() {
+    const panel = document.getElementById("panelCategorias");
+    return panel ? panel.classList.contains("abierto") : false;
+}
+
+function abrirMenuMovil() {
+    const panel = document.getElementById("panelCategorias");
+    const overlay = document.getElementById("overlayMovil");
+    const boton = document.getElementById("botonMenuMovil");
+    if (!panel || !overlay) return;
+
+    panel.classList.add("abierto");
+    overlay.classList.add("activo");
+    if (boton) boton.setAttribute("aria-expanded", "true");
+
+    const activo = panel.querySelector(".boton-categoria.activo") || panel.querySelector(".boton-categoria");
+    if (activo) activo.focus();
+}
+
+function cerrarMenuMovil() {
+    const panel = document.getElementById("panelCategorias");
+    const overlay = document.getElementById("overlayMovil");
+    const boton = document.getElementById("botonMenuMovil");
+    if (!panel || !overlay) return;
+
+    panel.classList.remove("abierto");
+    overlay.classList.remove("activo");
+    if (boton) boton.setAttribute("aria-expanded", "false");
+}
+
+function configurarMenuMovil() {
+    const botonMenu = document.getElementById("botonMenuMovil");
+    const botonCerrar = document.getElementById("botonCerrarPanel");
+    const overlay = document.getElementById("overlayMovil");
+
+    if (botonMenu) {
+        botonMenu.addEventListener("click", () => {
+            if (menuMovilAbierto()) {
+                cerrarMenuMovil();
+                botonMenu.focus();
+            } else {
+                abrirMenuMovil();
+            }
+        });
+    }
+
+    if (botonCerrar) {
+        botonCerrar.addEventListener("click", () => {
+            cerrarMenuMovil();
+            if (botonMenu) botonMenu.focus();
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener("click", () => {
+            cerrarMenuMovil();
+            if (botonMenu) botonMenu.focus();
+        });
+    }
+
+    /* Al volver a la vista de escritorio el menú debe quedar cerrado */
+    window.matchMedia(CONSULTA_MOVIL).addEventListener("change", (evento) => {
+        if (!evento.matches) cerrarMenuMovil();
     });
 }
 
-function configurarBusquedaSeccion() {
-    const input = document.getElementById("buscadorSeccion");
-    if (!input) return;
+/* 8. ATAJOS DE TECLADO ===================================== */
 
-    input.addEventListener("input", function () {
-        if (categoriaActual) {
-            mostrarEnlacesPorCategoria(categoriaActual, this.value);
+function estaEscribiendo(objetivo) {
+    if (!objetivo) return false;
+    const etiqueta = objetivo.tagName;
+    return etiqueta === "INPUT" || etiqueta === "TEXTAREA" || objetivo.isContentEditable;
+}
+
+function configurarAtajosTeclado() {
+    document.addEventListener("keydown", (evento) => {
+        const buscador = document.getElementById("buscadorSeccion");
+
+        /* "/" enfoca el buscador */
+        if (evento.key === "/" && !estaEscribiendo(evento.target)) {
+            if (buscador) {
+                evento.preventDefault();
+                buscador.focus();
+                buscador.select();
+            }
+            return;
+        }
+
+        /* Escape: vacía la búsqueda, cierra el menú o saca el foco */
+        if (evento.key === "Escape") {
+            if (menuMovilAbierto()) {
+                cerrarMenuMovil();
+                if (document.getElementById("botonMenuMovil")) {
+                    document.getElementById("botonMenuMovil").focus();
+                }
+                return;
+            }
+            if (buscador && buscador.value !== "" && evento.target === buscador) {
+                limpiarBusqueda();
+                return;
+            }
+        }
+
+        /* Flechas para recorrer las categorías */
+        if (evento.key === "ArrowDown" || evento.key === "ArrowUp") {
+            const activo = document.activeElement;
+            if (!activo || !activo.classList.contains("boton-categoria")) return;
+
+            const botones = Array.from(document.querySelectorAll(".boton-categoria"));
+            const posicion = botones.indexOf(activo);
+            if (posicion === -1) return;
+
+            evento.preventDefault();
+            const siguiente = evento.key === "ArrowDown" ? posicion + 1 : posicion - 1;
+            if (botones[siguiente]) {
+                botones[siguiente].focus();
+            }
         }
     });
 }
