@@ -16,15 +16,9 @@ const datosMarcadores = {
         { nombre: "Pulsar", descripcion: "Formato de datos estructurados, legible por humanos, jerárquico y extensible, diseñado desde cero (no derivado de JSON/YAML/TOML).", url: "https://jeironpro.github.io/pulsar/" },
         { nombre: "Link In Bio", descripcion: "Mi fichero de contacto.", url: "https://jeironpro.github.io/link-in-bio/" },
         { nombre: "Juegos", descripcion: "Monorepo que agrupa los juegos de jeironpro como una sala de máquinas. En la raíz vive un catálogo que indexa los 13 juegos; cada juego ocupa su propio subdirectorio (juego-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/juegos/" },
-        { nombre: "Juego Preguntas Respuestas", descripcion: "Juego Preguntas Respuestas.", url: "https://juego-preguntas-respuestas.pages.dev/" },
-        { nombre: "Juego Trivia", descripcion: "Juego de trivia con categorias.", url: "https://juego-trivia.pages.dev/" },
         { nombre: "Marcadores", descripcion: "Marcadores.", url: "https://jeironpro.github.io/marcadores" },
         { nombre: "Webs", descripcion: "Monorepo que agrupa las webs estáticas de jeironpro. En la raíz vive un catálogo que indexa los 46 proyectos; cada proyecto ocupa su propio subdirectorio (web-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/webs/" },
-        { nombre: "Web Pokemon", descripcion: "Pokemones de todas las generaciones.", url: "https://web-pokemon.pages.dev/" },
-        { nombre: "Web Naruto", descripcion: "Personajes de naruto.", url: "https://web-naruto.pages.dev/" },
         { nombre: "Dashboards", descripcion: "Monorepo que agrupa los dashboards de jeironpro como una sala de control. En la raíz vive un catálogo que indexa los 5 dashboards; cada dashboard ocupa su propio subdirectorio (dashboard-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/dashboards/" },
-        { nombre: "Exerciness", descripcion: "Catálogo de ejercicios de gimnasio con búsqueda, filtros, detalle, favoritos y comparador. Frontend SPA en React + Vite, sin backend.", url: "https://exerciness.pages.dev/" },
-        { nombre: "Codelang Quiz", descripcion: "Aplicación web de preguntas y respuestas sobre programación. Plantea problemáticas de código con opciones A/B/C/D categorizadas por lenguaje, dificultad y tipo.", url: "https://codelang-quiz.pages.dev/" },
         { nombre: "APIS", descripcion: "Portal web construido solo con HTML, CSS y JS puro (sin frameworks ni backend) que presenta el catálogo de las APIs y permite descargar cada API como .zip — o todas a la vez — directamente desde el navegador.", url: "https://jeironpro.github.io/apis/" },
         { nombre: "Frontend", descripcion: "Web de catálogo de componentes y prototipos de interfaz de usuario creados con HTML, CSS y JavaScript, sin frameworks ni librerías externas.", url: "https://jeironpro.github.io/frontend/" },
     ],
@@ -330,6 +324,7 @@ const datosMarcadores = {
     	{ nombre: "CRM", descripcion: "Comp AI CRM es un CRM de código abierto diseñado para agentes de IA. Un CRM centrado en la inteligencia artificial.", url: "https://github.com/trycompai/crm/" },
     	{ nombre: "Gmail Account Creator", descripcion: "Herramienta avanzada y automatizada para la creación de cuentas de Gmail con sistema anti-detección, verificación telefónica sin verificación, integración con 5SIM y una interfaz moderna y atractiva. Crea cuentas de Gmail en masa con facilidad.", url: "https://github.com/ShadowHackrs/gmail-account-creator/" },
     	{ nombre: "Gods Eye View", descripcion: "Un simulador de satélite espía en tu navegador, pero con datos reales. Inteligencia geoespacial de código abierto en tiempo real sobre un globo terráqueo 3D fotorrealista.", url: "https://github.com/bilawalsidhu/gods-eye-view/" },
+    	{ nombre: "Anki", descripcion: "Anki es un programa inteligente de tarjetas de memoria con repetición espaciada.", url: "https://github.com/ankitects/anki/" },
     ]
 };
 
