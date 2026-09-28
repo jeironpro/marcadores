@@ -15,12 +15,8 @@ const datosMarcadores = {
         { nombre: "Portafolio", descripcion: "Mi portafolio personal de desarrollador.", url: "https://portafolio-jeironpro.pages.dev/" },
         { nombre: "Pulsar", descripcion: "Formato de datos estructurados, legible por humanos, jerárquico y extensible, diseñado desde cero (no derivado de JSON/YAML/TOML).", url: "https://jeironpro.github.io/pulsar/" },
         { nombre: "Link In Bio", descripcion: "Mi fichero de contacto.", url: "https://jeironpro.github.io/link-in-bio/" },
-        { nombre: "Juegos", descripcion: "Monorepo que agrupa los juegos de jeironpro como una sala de máquinas. En la raíz vive un catálogo que indexa los 13 juegos; cada juego ocupa su propio subdirectorio (juego-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/juegos/" },
         { nombre: "Marcadores", descripcion: "Marcadores.", url: "https://jeironpro.github.io/marcadores" },
         { nombre: "Webs", descripcion: "Monorepo que agrupa las webs estáticas de jeironpro. En la raíz vive un catálogo que indexa los 46 proyectos; cada proyecto ocupa su propio subdirectorio (web-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/webs/" },
-        { nombre: "Dashboards", descripcion: "Monorepo que agrupa los dashboards de jeironpro como una sala de control. En la raíz vive un catálogo que indexa los 5 dashboards; cada dashboard ocupa su propio subdirectorio (dashboard-*) y se sirve de forma independiente como página estática.", url: "https://jeironpro.github.io/dashboards/" },
-        { nombre: "APIS", descripcion: "Portal web construido solo con HTML, CSS y JS puro (sin frameworks ni backend) que presenta el catálogo de las APIs y permite descargar cada API como .zip — o todas a la vez — directamente desde el navegador.", url: "https://jeironpro.github.io/apis/" },
-        { nombre: "Frontend", descripcion: "Web de catálogo de componentes y prototipos de interfaz de usuario creados con HTML, CSS y JavaScript, sin frameworks ni librerías externas.", url: "https://jeironpro.github.io/frontend/" },
     ],
     "Documentación": [
         { nombre: "Django", descripcion: "Framework web de alto nivel de Python para un desarrollo rápido y limpio.", url: "https://docs.djangoproject.com/" },
