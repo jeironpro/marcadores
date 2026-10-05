@@ -157,6 +157,7 @@ const datosMarcadores = {
         { nombre: "it's free", descripcion: "Todas las formas gratuitas de ejecutar un modelo de IA.", url: "https://itsfree.ai/" },
         { nombre: "Engineering Spotify", descripcion: "Descubre la magia detrás de la música y mucho más. Bienvenido a nuestro blog oficial de tecnología.", url: "https://engineering.atspotify.com/" },
         { nombre: "Libros Gratis", descripcion: "Libros gratis de programación en español.", url: "https://librosgratis.dev/" },
+        { nombre: "Frontend Mentor", descripcion: "Desarrolla proyectos reales con diseños y especificaciones profesionales, obtén revisiones de código mediante IA que te ayudarán a crear un perfil de tus puntos fuertes y crece junto a una comunidad que revisa el código de los demás.", url: "https://www.frontendmentor.io/challenges/" },
     ],
     "Google": [
         { nombre: "Gmail", descripcion: "Tu punto de bandeja indispensable y la llave en un ecosistema robusto universal de trabajo.", url: "https://mail.google.com/mail/u/0/?ogbl#inbox" },
@@ -322,6 +323,10 @@ const datosMarcadores = {
     	{ nombre: "Gmail Account Creator", descripcion: "Herramienta avanzada y automatizada para la creación de cuentas de Gmail con sistema anti-detección, verificación telefónica sin verificación, integración con 5SIM y una interfaz moderna y atractiva. Crea cuentas de Gmail en masa con facilidad.", url: "https://github.com/ShadowHackrs/gmail-account-creator/" },
     	{ nombre: "Gods Eye View", descripcion: "Un simulador de satélite espía en tu navegador, pero con datos reales. Inteligencia geoespacial de código abierto en tiempo real sobre un globo terráqueo 3D fotorrealista.", url: "https://github.com/bilawalsidhu/gods-eye-view/" },
     	{ nombre: "Anki", descripcion: "Anki es un programa inteligente de tarjetas de memoria con repetición espaciada.", url: "https://github.com/ankitects/anki/" },
+    	{ nombre: "REA", descripcion: "Realiza ingeniería inversa de cualquier cosa que involucre agentes, desde el comportamiento de la aplicación hasta los binarios nativos.", url: "https://github.com/morluto/rea/" },
+    	{ nombre: "Build-Your-Own-X", descripcion: "Domina la programación recreando tus tecnologías favoritas desde cero.", url: "https://github.com/codecrafters-io/build-your-own-x/" },
+    	{ nombre: "App Ideas", descripcion: "Una colección de ideas de aplicaciones que pueden utilizarse para mejorar tus habilidades de programación.", url: "https://github.com/florinpop17/app-ideas/" },
+    	{ nombre: "Project Bases Learning", descripcion: "Lista seleccionada de tutoriales basados ​​en proyectos", url: "https://github.com/practical-tutorials/project-based-learning/" },	
     ]
 };
 
